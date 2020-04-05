@@ -16,6 +16,9 @@
 		FA628C2E24223D3100B1DE4A /* CyberSpotApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA628C2C24223D3100B1DE4A /* CyberSpotApp.xcdatamodeld */; };
 		FA628C3024223D3200B1DE4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA628C2F24223D3200B1DE4A /* Assets.xcassets */; };
 		FA628C3324223D3200B1DE4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA628C3124223D3200B1DE4A /* LaunchScreen.storyboard */; };
+		FABF882B243A2AD1006043F1 /* MatchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF882A243A2AD1006043F1 /* MatchResponse.swift */; };
+		FABF882E243A36F7006043F1 /* NetworkManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF882D243A36F7006043F1 /* NetworkManagerService.swift */; };
+		FABF8830243A370C006043F1 /* NetworkManagerServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF882F243A370C006043F1 /* NetworkManagerServiceImpl.swift */; };
 		FAE8E2562438A54800B881B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8E2552438A54800B881B7 /* Constants.swift */; };
 		FAE8E2582438A7D200B881B7 /* OnboardingViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8E2572438A7D200B881B7 /* OnboardingViewInput.swift */; };
 		FAE8E25A2438A7F500B881B7 /* OnboardingViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8E2592438A7F500B881B7 /* OnboardingViewOutput.swift */; };
@@ -51,6 +54,9 @@
 		FA628C2F24223D3200B1DE4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA628C3224223D3200B1DE4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA628C3424223D3200B1DE4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABF882A243A2AD1006043F1 /* MatchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResponse.swift; sourceTree = "<group>"; };
+		FABF882D243A36F7006043F1 /* NetworkManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerService.swift; sourceTree = "<group>"; };
+		FABF882F243A370C006043F1 /* NetworkManagerServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerServiceImpl.swift; sourceTree = "<group>"; };
 		FAE8E2552438A54800B881B7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FAE8E2572438A7D200B881B7 /* OnboardingViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewInput.swift; sourceTree = "<group>"; };
 		FAE8E2592438A7F500B881B7 /* OnboardingViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewOutput.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 		FA09CA452438A3FC002164A3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				FABF882C243A36E2006043F1 /* NetworkManagerService */,
 				FA09CA4A2438A4C9002164A3 /* NewUserCheckerService */,
 			);
 			path = Service;
@@ -161,6 +168,7 @@
 		FA628C2024223D3100B1DE4A /* CyberSpotApp */ = {
 			isa = PBXGroup;
 			children = (
+				FABF8828243A2A65006043F1 /* Entity */,
 				FAE8E26A2438AF5C00B881B7 /* Module */,
 				FAE8E2542438A53A00B881B7 /* Helper */,
 				FA09CA452438A3FC002164A3 /* Service */,
@@ -173,6 +181,31 @@
 				FA628C2C24223D3100B1DE4A /* CyberSpotApp.xcdatamodeld */,
 			);
 			path = CyberSpotApp;
+			sourceTree = "<group>";
+		};
+		FABF8828243A2A65006043F1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FABF8829243A2A6F006043F1 /* Network */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FABF8829243A2A6F006043F1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FABF882A243A2AD1006043F1 /* MatchResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FABF882C243A36E2006043F1 /* NetworkManagerService */ = {
+			isa = PBXGroup;
+			children = (
+				FABF882D243A36F7006043F1 /* NetworkManagerService.swift */,
+				FABF882F243A370C006043F1 /* NetworkManagerServiceImpl.swift */,
+			);
+			path = NetworkManagerService;
 			sourceTree = "<group>";
 		};
 		FAE8E2542438A53A00B881B7 /* Helper */ = {
@@ -348,6 +381,8 @@
 				FAE8E2562438A54800B881B7 /* Constants.swift in Sources */,
 				FAE8E2822438B0C100B881B7 /* MatchResultsRouter.swift in Sources */,
 				FA09CA412438A17E002164A3 /* OnboardingViewController.swift in Sources */,
+				FABF882E243A36F7006043F1 /* NetworkManagerService.swift in Sources */,
+				FABF882B243A2AD1006043F1 /* MatchResponse.swift in Sources */,
 				FAE8E25E2438A88800B881B7 /* OnboardingInteractor.swift in Sources */,
 				FAE8E2802438B08E00B881B7 /* MatchResultsInteractorOutput.swift in Sources */,
 				FAE8E2622438A8B000B881B7 /* OnboardingInteractorOutput.swift in Sources */,
@@ -356,6 +391,7 @@
 				FAE8E25C2438A83B00B881B7 /* OnboardingPresenter.swift in Sources */,
 				FA09CA472438A438002164A3 /* NewUserService.swift in Sources */,
 				FAE8E2762438AFF000B881B7 /* MatchResultsViewInput.swift in Sources */,
+				FABF8830243A370C006043F1 /* NetworkManagerServiceImpl.swift in Sources */,
 				FAE8E25A2438A7F500B881B7 /* OnboardingViewOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
