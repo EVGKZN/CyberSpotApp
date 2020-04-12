@@ -10,4 +10,6 @@ import Foundation
 
 protocol MatchResultsInteractorInput: AnyObject {
     func checkIfUserNew()
+    func loadMatches()
+    func convertMatches(matches: [Match])
 }

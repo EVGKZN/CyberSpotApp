@@ -11,18 +11,21 @@ import UIKit
 class MatchResultsViewController: UIViewController, MatchResultsViewInput {
     
     var presenter: MatchResultsViewOutput!
+    var matches: [MatchDTO] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-        //Need to delete this, only for testing process
-        let networkManager = NetworkManagerServiceImpl()
-        networkManager.getMacthes()    }
+        presenter.loadMatches()
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         presenter.checkIfUserNew()
+    }
+    
+    func didFinishMatchesLoading(matches: [MatchDTO]) {
+        self.matches = matches
     }
 }

@@ -22,5 +22,16 @@ class MatchResultsPresenter: MatchResultsViewOutput, MatchResultsInteractorOutpu
         router.presentOnboarding()
     }
     
+    func loadMatches() {
+        interactor.loadMatches()
+    }
+    
+    func didFinishLoadingMatches(matches: [Match]) {
+        interactor.convertMatches(matches: matches)
+    }
+    
+    func didFinishConvertingMatches(matches: [MatchDTO]) {
+        view.didFinishMatchesLoading(matches: matches)
+    }
     
 }

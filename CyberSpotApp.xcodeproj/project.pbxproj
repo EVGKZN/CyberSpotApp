@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F77337B5B1B762298B346AF /* Pods_CyberSpotApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1DEC28403CA724D9939E4D /* Pods_CyberSpotApp.framework */; };
 		FA09CA412438A17E002164A3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09CA402438A17E002164A3 /* OnboardingViewController.swift */; };
 		FA09CA472438A438002164A3 /* NewUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09CA462438A438002164A3 /* NewUserService.swift */; };
 		FA09CA492438A4AC002164A3 /* NewUserServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09CA482438A4AC002164A3 /* NewUserServiceImpl.swift */; };
@@ -16,6 +17,9 @@
 		FA628C2E24223D3100B1DE4A /* CyberSpotApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA628C2C24223D3100B1DE4A /* CyberSpotApp.xcdatamodeld */; };
 		FA628C3024223D3200B1DE4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA628C2F24223D3200B1DE4A /* Assets.xcassets */; };
 		FA628C3324223D3200B1DE4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA628C3124223D3200B1DE4A /* LaunchScreen.storyboard */; };
+		FAB54CAA24433C6C00E582BF /* MatchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54CA924433C6C00E582BF /* MatchDTO.swift */; };
+		FAB54CAD24433CFE00E582BF /* ReponseToDTOConverterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54CAC24433CFE00E582BF /* ReponseToDTOConverterService.swift */; };
+		FAB54CAF24433D1800E582BF /* ReponseToDTOConverterServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54CAE24433D1800E582BF /* ReponseToDTOConverterServiceImpl.swift */; };
 		FABF882B243A2AD1006043F1 /* MatchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF882A243A2AD1006043F1 /* MatchResponse.swift */; };
 		FABF882E243A36F7006043F1 /* NetworkManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF882D243A36F7006043F1 /* NetworkManagerService.swift */; };
 		FABF8830243A370C006043F1 /* NetworkManagerServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF882F243A370C006043F1 /* NetworkManagerServiceImpl.swift */; };
@@ -43,6 +47,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34C6459B8913A52AE56670BF /* Pods-CyberSpotApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyberSpotApp.debug.xcconfig"; path = "Target Support Files/Pods-CyberSpotApp/Pods-CyberSpotApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4A1DEC28403CA724D9939E4D /* Pods_CyberSpotApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CyberSpotApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		922076F941964EFFE8973DD9 /* Pods-CyberSpotApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyberSpotApp.release.xcconfig"; path = "Target Support Files/Pods-CyberSpotApp/Pods-CyberSpotApp.release.xcconfig"; sourceTree = "<group>"; };
 		FA09CA402438A17E002164A3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		FA09CA462438A438002164A3 /* NewUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserService.swift; sourceTree = "<group>"; };
 		FA09CA482438A4AC002164A3 /* NewUserServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserServiceImpl.swift; sourceTree = "<group>"; };
@@ -54,6 +61,9 @@
 		FA628C2F24223D3200B1DE4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA628C3224223D3200B1DE4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA628C3424223D3200B1DE4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB54CA924433C6C00E582BF /* MatchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDTO.swift; sourceTree = "<group>"; };
+		FAB54CAC24433CFE00E582BF /* ReponseToDTOConverterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReponseToDTOConverterService.swift; sourceTree = "<group>"; };
+		FAB54CAE24433D1800E582BF /* ReponseToDTOConverterServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReponseToDTOConverterServiceImpl.swift; sourceTree = "<group>"; };
 		FABF882A243A2AD1006043F1 /* MatchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResponse.swift; sourceTree = "<group>"; };
 		FABF882D243A36F7006043F1 /* NetworkManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerService.swift; sourceTree = "<group>"; };
 		FABF882F243A370C006043F1 /* NetworkManagerServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerServiceImpl.swift; sourceTree = "<group>"; };
@@ -85,12 +95,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F77337B5B1B762298B346AF /* Pods_CyberSpotApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EE5E1557AC818F569708220 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A1DEC28403CA724D9939E4D /* Pods_CyberSpotApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86EB7DCF4B7110105689CC6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34C6459B8913A52AE56670BF /* Pods-CyberSpotApp.debug.xcconfig */,
+				922076F941964EFFE8973DD9 /* Pods-CyberSpotApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA09CA3F24389F8D002164A3 /* OnboardingModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +162,7 @@
 		FA09CA452438A3FC002164A3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				FAB54CAB24433CDD00E582BF /* ResponseToDTOConverterService */,
 				FABF882C243A36E2006043F1 /* NetworkManagerService */,
 				FA09CA4A2438A4C9002164A3 /* NewUserCheckerService */,
 			);
@@ -154,6 +183,8 @@
 			children = (
 				FA628C2024223D3100B1DE4A /* CyberSpotApp */,
 				FA628C1F24223D3100B1DE4A /* Products */,
+				86EB7DCF4B7110105689CC6A /* Pods */,
+				5EE5E1557AC818F569708220 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,9 +214,35 @@
 			path = CyberSpotApp;
 			sourceTree = "<group>";
 		};
+		FAB54CA824433C5B00E582BF /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				FAB54CA924433C6C00E582BF /* MatchDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		FAB54CAB24433CDD00E582BF /* ResponseToDTOConverterService */ = {
+			isa = PBXGroup;
+			children = (
+				FAB54CAC24433CFE00E582BF /* ReponseToDTOConverterService.swift */,
+				FAB54CAE24433D1800E582BF /* ReponseToDTOConverterServiceImpl.swift */,
+			);
+			path = ResponseToDTOConverterService;
+			sourceTree = "<group>";
+		};
+		FAB54CB024434D7500E582BF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FAE8E2552438A54800B881B7 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		FABF8828243A2A65006043F1 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				FAB54CA824433C5B00E582BF /* DTO */,
 				FABF8829243A2A6F006043F1 /* Network */,
 			);
 			path = Entity;
@@ -211,7 +268,7 @@
 		FAE8E2542438A53A00B881B7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				FAE8E2552438A54800B881B7 /* Constants.swift */,
+				FAB54CB024434D7500E582BF /* Constants */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -299,9 +356,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA628C3724223D3200B1DE4A /* Build configuration list for PBXNativeTarget "CyberSpotApp" */;
 			buildPhases = (
+				CBE0CF0B64E99841AC628CB6 /* [CP] Check Pods Manifest.lock */,
 				FA628C1A24223D3100B1DE4A /* Sources */,
 				FA628C1B24223D3100B1DE4A /* Frameworks */,
 				FA628C1C24223D3100B1DE4A /* Resources */,
+				D620F3BC6F34B128F46FFAC2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -358,11 +417,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CBE0CF0B64E99841AC628CB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CyberSpotApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D620F3BC6F34B128F46FFAC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CyberSpotApp/Pods-CyberSpotApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CyberSpotApp/Pods-CyberSpotApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CyberSpotApp/Pods-CyberSpotApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA628C1A24223D3100B1DE4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB54CAF24433D1800E582BF /* ReponseToDTOConverterServiceImpl.swift in Sources */,
 				FAE8E2602438A8A100B881B7 /* OnboardingInteractorInput.swift in Sources */,
 				FA628C2E24223D3100B1DE4A /* CyberSpotApp.xcdatamodeld in Sources */,
 				FAE8E2782438B00500B881B7 /* MatchResultsViewOutput.swift in Sources */,
@@ -370,6 +472,7 @@
 				FAE8E2672438AA9900B881B7 /* OnboardingRouterInput.swift in Sources */,
 				FA09CA492438A4AC002164A3 /* NewUserServiceImpl.swift in Sources */,
 				FAE8E27C2438B05800B881B7 /* MatchResultsInteractor.swift in Sources */,
+				FAB54CAA24433C6C00E582BF /* MatchDTO.swift in Sources */,
 				FAE8E2842438B0D600B881B7 /* MatchResultsRouterInput.swift in Sources */,
 				FAE8E27E2438B07200B881B7 /* MatchResultsInteractorInput.swift in Sources */,
 				FAE8E2652438AA8B00B881B7 /* OnboardingRouter.swift in Sources */,
@@ -390,6 +493,7 @@
 				FAE8E2742438AFE000B881B7 /* MatchResultsViewController.swift in Sources */,
 				FAE8E25C2438A83B00B881B7 /* OnboardingPresenter.swift in Sources */,
 				FA09CA472438A438002164A3 /* NewUserService.swift in Sources */,
+				FAB54CAD24433CFE00E582BF /* ReponseToDTOConverterService.swift in Sources */,
 				FAE8E2762438AFF000B881B7 /* MatchResultsViewInput.swift in Sources */,
 				FABF8830243A370C006043F1 /* NetworkManagerServiceImpl.swift in Sources */,
 				FAE8E25A2438A7F500B881B7 /* OnboardingViewOutput.swift in Sources */,
@@ -534,6 +638,7 @@
 		};
 		FA628C3824223D3200B1DE4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34C6459B8913A52AE56670BF /* Pods-CyberSpotApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +657,7 @@
 		};
 		FA628C3924223D3200B1DE4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 922076F941964EFFE8973DD9 /* Pods-CyberSpotApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

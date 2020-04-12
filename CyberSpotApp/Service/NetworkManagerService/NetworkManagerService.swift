@@ -9,5 +9,5 @@
 import Foundation
 
 protocol NetworkManagerService {
-    
+    func getMacthes(completion: @escaping ([Match]) -> Void)
 }

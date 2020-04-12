@@ -11,8 +11,11 @@ import UIKit
 
 class NetworkManagerServiceImpl: NetworkManagerService {
     
-    func getMacthes() {
-        guard let url = URL(string: "https://api.pandascore.co/matches/past?sort=-end_at&filter[videogame]=3,4&page[size]=3&token=Y3WnVBNBbUh54mUUZozfLIi7MzPz6ZiEAYIBxUNi5uG6nD71i14") else { return }
+    func getMacthes(completion: @escaping ([Match]) -> Void) {
+        
+        var matches: [Match] = []
+        
+        guard let url = URL(string: Constants.apiMatchesStringUrl) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             
@@ -22,13 +25,11 @@ class NetworkManagerServiceImpl: NetworkManagerService {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             
             do {
-                print("Started matches decoding")
-                let matches = try decoder.decode([Match].self, from: data)
-                print(matches[1].results)
+                matches = try decoder.decode([Match].self, from: data)
+                completion(matches)
             } catch let jsonError {
                 print(jsonError)
             }
-            
         }.resume()
     }
 }
