@@ -30,5 +30,25 @@ struct Constants {
     
     //MARK: - ViewControllers Names Constants
     static let onboardingViewControllerName = "OnboardingViewController"
+    
+    //MARK: - Videogame Names Constants
+    static let dota2Name = "Dota 2"
+    static let csgoName = "CS:GO"
+    
+    //MARK: - Videogame Image Names Constants
+    static let dota2ImageName = "dota2ButtonIcon"
+    static let csgoImageName = "csgoButtonIcon"
+    
+    //MARK: - Cell Configuration Constants
+    static let firstOpponentNumber = 0
+    static let secondOpponentNumber = 1
+    static let placeholderImageName = "cyberSpotLogo"
+    static let preferredHeight = 200
+    
+    //MARK: - Custom Cell's Reuse Identifiers Constants
+    static let customMatchCellReuseIdentifier = "customMatchCell"
+    
+    //MARK: - Custom Cell's Nib Names Constants
+    static let customMatchCellNibName = "MatchTableViewCell"
 }
 

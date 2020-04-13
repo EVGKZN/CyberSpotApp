@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7F77337B5B1B762298B346AF /* Pods_CyberSpotApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1DEC28403CA724D9939E4D /* Pods_CyberSpotApp.framework */; };
+		FA07F09624448B2E00A85E31 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07F09424448B2E00A85E31 /* MatchTableViewCell.swift */; };
+		FA07F09724448B2E00A85E31 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA07F09524448B2E00A85E31 /* MatchTableViewCell.xib */; };
 		FA09CA412438A17E002164A3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09CA402438A17E002164A3 /* OnboardingViewController.swift */; };
 		FA09CA472438A438002164A3 /* NewUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09CA462438A438002164A3 /* NewUserService.swift */; };
 		FA09CA492438A4AC002164A3 /* NewUserServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09CA482438A4AC002164A3 /* NewUserServiceImpl.swift */; };
@@ -50,6 +52,8 @@
 		34C6459B8913A52AE56670BF /* Pods-CyberSpotApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyberSpotApp.debug.xcconfig"; path = "Target Support Files/Pods-CyberSpotApp/Pods-CyberSpotApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4A1DEC28403CA724D9939E4D /* Pods_CyberSpotApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CyberSpotApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922076F941964EFFE8973DD9 /* Pods-CyberSpotApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyberSpotApp.release.xcconfig"; path = "Target Support Files/Pods-CyberSpotApp/Pods-CyberSpotApp.release.xcconfig"; sourceTree = "<group>"; };
+		FA07F09424448B2E00A85E31 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		FA07F09524448B2E00A85E31 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
 		FA09CA402438A17E002164A3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		FA09CA462438A438002164A3 /* NewUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserService.swift; sourceTree = "<group>"; };
 		FA09CA482438A4AC002164A3 /* NewUserServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserServiceImpl.swift; sourceTree = "<group>"; };
@@ -117,6 +121,23 @@
 				922076F941964EFFE8973DD9 /* Pods-CyberSpotApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA07F09224448B0B00A85E31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA07F09324448B1300A85E31 /* MatchTableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA07F09324448B1300A85E31 /* MatchTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA07F09424448B2E00A85E31 /* MatchTableViewCell.swift */,
+				FA07F09524448B2E00A85E31 /* MatchTableViewCell.xib */,
+			);
+			path = MatchTableViewCell;
 			sourceTree = "<group>";
 		};
 		FA09CA3F24389F8D002164A3 /* OnboardingModule */ = {
@@ -268,6 +289,7 @@
 		FAE8E2542438A53A00B881B7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				FA07F09224448B0B00A85E31 /* View */,
 				FAB54CB024434D7500E582BF /* Constants */,
 			);
 			path = Helper;
@@ -412,6 +434,7 @@
 				FA628C3324223D3200B1DE4A /* LaunchScreen.storyboard in Resources */,
 				FA628C3024223D3200B1DE4A /* Assets.xcassets in Resources */,
 				FA628C2B24223D3100B1DE4A /* Main.storyboard in Resources */,
+				FA07F09724448B2E00A85E31 /* MatchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +512,7 @@
 				FAE8E25E2438A88800B881B7 /* OnboardingInteractor.swift in Sources */,
 				FAE8E2802438B08E00B881B7 /* MatchResultsInteractorOutput.swift in Sources */,
 				FAE8E2622438A8B000B881B7 /* OnboardingInteractorOutput.swift in Sources */,
+				FA07F09624448B2E00A85E31 /* MatchTableViewCell.swift in Sources */,
 				FAE8E27A2438B03000B881B7 /* MatchResultsPresenter.swift in Sources */,
 				FAE8E2742438AFE000B881B7 /* MatchResultsViewController.swift in Sources */,
 				FAE8E25C2438A83B00B881B7 /* OnboardingPresenter.swift in Sources */,
