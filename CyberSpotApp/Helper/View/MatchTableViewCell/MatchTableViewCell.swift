@@ -17,6 +17,8 @@ class MatchTableViewCell: UITableViewCell {
     @IBOutlet weak var secondOpponentImageImageView: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var dateTimeLabel: UILabel!
+    @IBOutlet weak var firstOpponentNameLabel: UILabel!
+    @IBOutlet weak var secondOpponentNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,10 +37,12 @@ class MatchTableViewCell: UITableViewCell {
     func configure(with match: MatchDTO) {
         
         videogameImageImageView.image = match.videogame.name == Constants.dota2Name ? UIImage(named: Constants.dota2ImageName) : UIImage(named: Constants.csgoImageName)
-        videogameNameLabel.text = match.videogame.name == Constants.dota2Name ? Constants.dota2Name : Constants.csgoName
+        videogameNameLabel.text = match.videogame.name == Constants.dota2Name ? Constants.dota2Name.uppercased() : Constants.csgoName
             
         firstOpponentImageImageView.sd_setImage(with: URL(string: match.opponents[Constants.firstOpponentNumber].opponent.imageUrl), placeholderImage: UIImage(named: Constants.placeholderImageName))
+        firstOpponentNameLabel.text = match.opponents[Constants.firstOpponentNumber].opponent.name
         secondOpponentImageImageView.sd_setImage(with: URL(string: match.opponents[Constants.secondOpponentNumber].opponent.imageUrl), placeholderImage: UIImage(named: Constants.placeholderImageName))
+        secondOpponentNameLabel.text = match.opponents[Constants.secondOpponentNumber].opponent.name
         
         scoreLabel.text = "\(match.results[Constants.firstOpponentNumber].score) : \(match.results[Constants.secondOpponentNumber].score)"
         dateTimeLabel.text = match.scheduledAt
