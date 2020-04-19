@@ -14,8 +14,9 @@ class NetworkManagerServiceImpl: NetworkManagerService {
     func getMacthes(completion: @escaping ([Match]) -> Void) {
         
         var matches: [Match] = []
+        let urlConstructor = URLConstructorManager()
         
-        guard let url = URL(string: Constants.apiMatchesStringUrl) else { return }
+        guard let url = URL(string: urlConstructor.getMatchesAPIUrl()) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             

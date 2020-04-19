@@ -14,6 +14,7 @@ class MatchResultsInteractor: MatchResultsInteractorInput {
     var newUserService: NewUserService!
     var networkManager: NetworkManagerService!
     var responseToDTOConverter: ReponseToDTOConverterService!
+    var settingsConfigurationService: SettingsConfigurationService!
     
     func checkIfUserNew() {
         if newUserService.isUserNew() { presenter.didFinishChekingNewUser() }
@@ -28,5 +29,9 @@ class MatchResultsInteractor: MatchResultsInteractorInput {
     func convertMatches(matches: [Match]) {
         let convertedMatches = responseToDTOConverter.convertToDTO(matches: matches)
         presenter.didFinishConvertingMatches(matches: convertedMatches)
+    }
+    
+    func initDefaultConfiguration() {
+        settingsConfigurationService.initDefaultConfiguration()
     }
 }

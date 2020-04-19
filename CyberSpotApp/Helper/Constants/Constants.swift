@@ -19,7 +19,7 @@ struct Constants {
     static let customDateFormat = "dd.MM.yyyy HH:mm"
     
     //MARK: - Network Constants
-    static let apiMatchesStringUrl = "https://api.pandascore.co/matches/past?sort=-end_at&filter[videogame]=3,4&page[size]=30&token=Y3WnVBNBbUh54mUUZozfLIi7MzPz6ZiEAYIBxUNi5uG6nD71i14"
+    static let apiMatchesStringUrl = "https://api.pandascore.co/matches/past?sort=-end_at&filter[videogame]=4,3&page[size]=30&token=Y3WnVBNBbUh54mUUZozfLIi7MzPz6ZiEAYIBxUNi5uG6nD71i14"
     
     //MARK: - UserDefaults Keys Constants
     static let userDefaultsNewUserKey = "isUserNew"
@@ -36,8 +36,8 @@ struct Constants {
     static let csgoName = "CS:GO"
     
     //MARK: - Videogame Image Names Constants
-    static let dota2ImageName = "dota2ButtonIcon"
-    static let csgoImageName = "csgoButtonIcon"
+    static let dota2ImageName = "dota2OnIcon"
+    static let csgoImageName = "csgoOnIcon"
     
     //MARK: - Cell Configuration Constants
     static let firstOpponentNumber = 0
@@ -50,5 +50,18 @@ struct Constants {
     
     //MARK: - Custom Cell's Nib Names Constants
     static let customMatchCellNibName = "MatchTableViewCell"
+    
+    //MARK: - Settings View Button's Images
+    static let csgoOnIconImage = "csgoOnIcon"
+    static let csgoOffIconImage = "csgoOffIcon"
+    static let dota2OnIconImage = "dota2OnIcon"
+    static let dota2OffIconImage = "dota2OffIcon"
+    
+    //MARK: - Settings View Vieogame's Ids
+    static let defaultCSGOVideogameId = 3
+    static let defaultDota2VideogameId = 4
+    
+    static let defaultVideogamesIdArray = [3,4]
+    static let userDefaultsVideogamesIdArrayKey = "videogamesIdArray"
 }
 

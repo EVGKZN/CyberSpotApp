@@ -264,10 +264,10 @@
             </objects>
             <point key="canvasLocation" x="-541" y="-354"/>
         </scene>
-        <!--SettingsViewController-->
+        <!--View Controller-->
         <scene sceneID="dH0-Z8-My5">
             <objects>
-                <viewController title="SettingsViewController" id="pIP-2R-zC8" sceneMemberID="viewController">
+                <viewController title="SettingsViewController" id="pIP-2R-zC8" customClass="SettingsViewController" customModule="CyberSpotApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rfu-C0-nB9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,9 +278,12 @@
                                     <constraint firstAttribute="height" constant="128" id="Kw0-ee-2et"/>
                                     <constraint firstAttribute="width" constant="128" id="ZGO-Op-qG2"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="csgoButtonIcon">
+                                <state key="normal" title="Button" image="csgoOnIcon">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressedCSGOButton:" destination="pIP-2R-zC8" eventType="touchUpInside" id="nNp-Xs-dqA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройка отображения дисциплин" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I38-er-Z9u">
                                 <rect key="frame" x="20" y="64" width="374" height="80"/>
@@ -294,9 +297,12 @@
                                     <constraint firstAttribute="width" constant="128" id="S5p-TV-Pgz"/>
                                     <constraint firstAttribute="height" constant="128" id="lsm-LV-Aof"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="dota2ButtonIcon">
+                                <state key="normal" title="Button" image="dota2OnIcon">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressedDota2Button:" destination="pIP-2R-zC8" eventType="touchUpInside" id="xvz-iL-YDI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -312,18 +318,27 @@
                         <viewLayoutGuide key="safeArea" id="HSA-Zf-d0y"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" id="alH-jV-a7T"/>
+                    <connections>
+                        <outlet property="csgoButton" destination="hAr-3z-fWD" id="Urv-fG-uH9"/>
+                        <outlet property="dota2Button" destination="JLA-DG-Nk1" id="Z4y-RH-rcb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYq-z2-YOX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="6fs-MA-bYJ" customClass="SettingsAssembly" customModule="CyberSpotApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="pIP-2R-zC8" id="cip-ag-yKF"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="485.50724637681162" y="380.35714285714283"/>
         </scene>
     </scenes>
     <resources>
         <image name="closeButtonIcon" width="512" height="512"/>
-        <image name="csgoButtonIcon" width="128" height="128"/>
+        <image name="csgoOnIcon" width="128" height="128"/>
         <image name="customLine" width="65" height="1"/>
         <image name="cyberSpotLogo" width="241" height="241"/>
-        <image name="dota2ButtonIcon" width="128" height="128"/>
+        <image name="dota2OnIcon" width="1993" height="1993"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="globe" catalog="system" width="64" height="60"/>
         <image name="heart" catalog="system" width="64" height="54"/>

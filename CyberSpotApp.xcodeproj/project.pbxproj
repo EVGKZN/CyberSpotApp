@@ -13,6 +13,17 @@
 		FA09CA412438A17E002164A3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09CA402438A17E002164A3 /* OnboardingViewController.swift */; };
 		FA09CA472438A438002164A3 /* NewUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09CA462438A438002164A3 /* NewUserService.swift */; };
 		FA09CA492438A4AC002164A3 /* NewUserServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09CA482438A4AC002164A3 /* NewUserServiceImpl.swift */; };
+		FA2163D6244C868200F58F95 /* SettingsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2163D5244C868200F58F95 /* SettingsAssembly.swift */; };
+		FA2163D8244C86A900F58F95 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2163D7244C86A900F58F95 /* SettingsViewController.swift */; };
+		FA2163DB244C87C200F58F95 /* SettingsConfigurationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2163DA244C87C200F58F95 /* SettingsConfigurationService.swift */; };
+		FA2163DD244C87D200F58F95 /* SettingsConfigurationServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2163DC244C87D200F58F95 /* SettingsConfigurationServiceImpl.swift */; };
+		FA2163DF244C935200F58F95 /* SettingsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2163DE244C935200F58F95 /* SettingsViewInput.swift */; };
+		FA2163E1244C938100F58F95 /* SettingsViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2163E0244C938100F58F95 /* SettingsViewOutput.swift */; };
+		FA2163E3244C93A300F58F95 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2163E2244C93A300F58F95 /* SettingsPresenter.swift */; };
+		FA2163E5244C93BF00F58F95 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2163E4244C93BF00F58F95 /* SettingsInteractor.swift */; };
+		FA2163E7244C93E000F58F95 /* SettingsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2163E6244C93E000F58F95 /* SettingsInteractorInput.swift */; };
+		FA2163E9244C93FE00F58F95 /* SettingsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2163E8244C93FE00F58F95 /* SettingsInteractorOutput.swift */; };
+		FA2163EC244C9E7300F58F95 /* URLConstructorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2163EB244C9E7300F58F95 /* URLConstructorManager.swift */; };
 		FA628C2224223D3100B1DE4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA628C2124223D3100B1DE4A /* AppDelegate.swift */; };
 		FA628C2424223D3100B1DE4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA628C2324223D3100B1DE4A /* SceneDelegate.swift */; };
 		FA628C2B24223D3100B1DE4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA628C2924223D3100B1DE4A /* Main.storyboard */; };
@@ -57,6 +68,17 @@
 		FA09CA402438A17E002164A3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		FA09CA462438A438002164A3 /* NewUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserService.swift; sourceTree = "<group>"; };
 		FA09CA482438A4AC002164A3 /* NewUserServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserServiceImpl.swift; sourceTree = "<group>"; };
+		FA2163D5244C868200F58F95 /* SettingsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAssembly.swift; sourceTree = "<group>"; };
+		FA2163D7244C86A900F58F95 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FA2163DA244C87C200F58F95 /* SettingsConfigurationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsConfigurationService.swift; sourceTree = "<group>"; };
+		FA2163DC244C87D200F58F95 /* SettingsConfigurationServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsConfigurationServiceImpl.swift; sourceTree = "<group>"; };
+		FA2163DE244C935200F58F95 /* SettingsViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewInput.swift; sourceTree = "<group>"; };
+		FA2163E0244C938100F58F95 /* SettingsViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewOutput.swift; sourceTree = "<group>"; };
+		FA2163E2244C93A300F58F95 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		FA2163E4244C93BF00F58F95 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		FA2163E6244C93E000F58F95 /* SettingsInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractorInput.swift; sourceTree = "<group>"; };
+		FA2163E8244C93FE00F58F95 /* SettingsInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractorOutput.swift; sourceTree = "<group>"; };
+		FA2163EB244C9E7300F58F95 /* URLConstructorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstructorManager.swift; sourceTree = "<group>"; };
 		FA628C1E24223D3100B1DE4A /* CyberSpotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberSpotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA628C2124223D3100B1DE4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA628C2324223D3100B1DE4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +205,7 @@
 		FA09CA452438A3FC002164A3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				FA2163D9244C879F00F58F95 /* SettingsConfigurationService */,
 				FAB54CAB24433CDD00E582BF /* ResponseToDTOConverterService */,
 				FABF882C243A36E2006043F1 /* NetworkManagerService */,
 				FA09CA4A2438A4C9002164A3 /* NewUserCheckerService */,
@@ -197,6 +220,62 @@
 				FA09CA482438A4AC002164A3 /* NewUserServiceImpl.swift */,
 			);
 			path = NewUserCheckerService;
+			sourceTree = "<group>";
+		};
+		FA2163D1244C864900F58F95 /* SettingsModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA2163D4244C866900F58F95 /* Interactor */,
+				FA2163D3244C866400F58F95 /* Presenter */,
+				FA2163D2244C866000F58F95 /* View */,
+				FA2163D5244C868200F58F95 /* SettingsAssembly.swift */,
+			);
+			path = SettingsModule;
+			sourceTree = "<group>";
+		};
+		FA2163D2244C866000F58F95 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA2163D7244C86A900F58F95 /* SettingsViewController.swift */,
+				FA2163DE244C935200F58F95 /* SettingsViewInput.swift */,
+				FA2163E0244C938100F58F95 /* SettingsViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA2163D3244C866400F58F95 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA2163E2244C93A300F58F95 /* SettingsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FA2163D4244C866900F58F95 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FA2163E4244C93BF00F58F95 /* SettingsInteractor.swift */,
+				FA2163E6244C93E000F58F95 /* SettingsInteractorInput.swift */,
+				FA2163E8244C93FE00F58F95 /* SettingsInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FA2163D9244C879F00F58F95 /* SettingsConfigurationService */ = {
+			isa = PBXGroup;
+			children = (
+				FA2163DA244C87C200F58F95 /* SettingsConfigurationService.swift */,
+				FA2163DC244C87D200F58F95 /* SettingsConfigurationServiceImpl.swift */,
+			);
+			path = SettingsConfigurationService;
+			sourceTree = "<group>";
+		};
+		FA2163EA244C9E5800F58F95 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FA2163EB244C9E7300F58F95 /* URLConstructorManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		FA628C1524223D3100B1DE4A = {
@@ -289,6 +368,7 @@
 		FAE8E2542438A53A00B881B7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				FA2163EA244C9E5800F58F95 /* Manager */,
 				FA07F09224448B0B00A85E31 /* View */,
 				FAB54CB024434D7500E582BF /* Constants */,
 			);
@@ -307,6 +387,7 @@
 		FAE8E26A2438AF5C00B881B7 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				FA2163D1244C864900F58F95 /* SettingsModule */,
 				FAE8E2852438B64500B881B7 /* TabBarController */,
 				FAE8E26B2438AF6900B881B7 /* MatchResultsModule */,
 				FA09CA3F24389F8D002164A3 /* OnboardingModule */,
@@ -490,10 +571,12 @@
 				FAB54CAF24433D1800E582BF /* ReponseToDTOConverterServiceImpl.swift in Sources */,
 				FAE8E2602438A8A100B881B7 /* OnboardingInteractorInput.swift in Sources */,
 				FA628C2E24223D3100B1DE4A /* CyberSpotApp.xcdatamodeld in Sources */,
+				FA2163DB244C87C200F58F95 /* SettingsConfigurationService.swift in Sources */,
 				FAE8E2782438B00500B881B7 /* MatchResultsViewOutput.swift in Sources */,
 				FAE8E2872438B66600B881B7 /* TabBarController.swift in Sources */,
 				FAE8E2672438AA9900B881B7 /* OnboardingRouterInput.swift in Sources */,
 				FA09CA492438A4AC002164A3 /* NewUserServiceImpl.swift in Sources */,
+				FA2163E1244C938100F58F95 /* SettingsViewOutput.swift in Sources */,
 				FAE8E27C2438B05800B881B7 /* MatchResultsInteractor.swift in Sources */,
 				FAB54CAA24433C6C00E582BF /* MatchDTO.swift in Sources */,
 				FAE8E2842438B0D600B881B7 /* MatchResultsRouterInput.swift in Sources */,
@@ -502,25 +585,34 @@
 				FAE8E2582438A7D200B881B7 /* OnboardingViewInput.swift in Sources */,
 				FAE8E2692438AD6900B881B7 /* OnboardingAssembly.swift in Sources */,
 				FAE8E2722438AFB600B881B7 /* MatchResultsAssembly.swift in Sources */,
+				FA2163E5244C93BF00F58F95 /* SettingsInteractor.swift in Sources */,
 				FA628C2224223D3100B1DE4A /* AppDelegate.swift in Sources */,
 				FA628C2424223D3100B1DE4A /* SceneDelegate.swift in Sources */,
+				FA2163D6244C868200F58F95 /* SettingsAssembly.swift in Sources */,
 				FAE8E2562438A54800B881B7 /* Constants.swift in Sources */,
+				FA2163E9244C93FE00F58F95 /* SettingsInteractorOutput.swift in Sources */,
 				FAE8E2822438B0C100B881B7 /* MatchResultsRouter.swift in Sources */,
+				FA2163E3244C93A300F58F95 /* SettingsPresenter.swift in Sources */,
+				FA2163DD244C87D200F58F95 /* SettingsConfigurationServiceImpl.swift in Sources */,
+				FA2163EC244C9E7300F58F95 /* URLConstructorManager.swift in Sources */,
 				FA09CA412438A17E002164A3 /* OnboardingViewController.swift in Sources */,
 				FABF882E243A36F7006043F1 /* NetworkManagerService.swift in Sources */,
 				FABF882B243A2AD1006043F1 /* MatchResponse.swift in Sources */,
 				FAE8E25E2438A88800B881B7 /* OnboardingInteractor.swift in Sources */,
 				FAE8E2802438B08E00B881B7 /* MatchResultsInteractorOutput.swift in Sources */,
 				FAE8E2622438A8B000B881B7 /* OnboardingInteractorOutput.swift in Sources */,
+				FA2163E7244C93E000F58F95 /* SettingsInteractorInput.swift in Sources */,
 				FA07F09624448B2E00A85E31 /* MatchTableViewCell.swift in Sources */,
 				FAE8E27A2438B03000B881B7 /* MatchResultsPresenter.swift in Sources */,
 				FAE8E2742438AFE000B881B7 /* MatchResultsViewController.swift in Sources */,
 				FAE8E25C2438A83B00B881B7 /* OnboardingPresenter.swift in Sources */,
 				FA09CA472438A438002164A3 /* NewUserService.swift in Sources */,
 				FAB54CAD24433CFE00E582BF /* ReponseToDTOConverterService.swift in Sources */,
+				FA2163DF244C935200F58F95 /* SettingsViewInput.swift in Sources */,
 				FAE8E2762438AFF000B881B7 /* MatchResultsViewInput.swift in Sources */,
 				FABF8830243A370C006043F1 /* NetworkManagerServiceImpl.swift in Sources */,
 				FAE8E25A2438A7F500B881B7 /* OnboardingViewOutput.swift in Sources */,
+				FA2163D8244C86A900F58F95 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

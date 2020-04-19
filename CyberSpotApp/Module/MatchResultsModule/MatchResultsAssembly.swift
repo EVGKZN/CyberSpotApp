@@ -24,6 +24,7 @@ class MatchResultsAssembly: NSObject {
         let newUserService = NewUserServiceImpl()
         let networkManagerService = NetworkManagerServiceImpl()
         let reponseToDTOConverterService = ReponseToDTOConverterServiceImpl()
+        let settingsConfigurationService = SettingsConfigurationServiceImpl()
         
         view.presenter = presenter
         
@@ -35,6 +36,7 @@ class MatchResultsAssembly: NSObject {
         interactor.newUserService = newUserService
         interactor.networkManager = networkManagerService
         interactor.responseToDTOConverter = reponseToDTOConverterService
+        interactor.settingsConfigurationService = settingsConfigurationService
         
         router.view = view
     }
