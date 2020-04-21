@@ -11,4 +11,5 @@ import Foundation
 protocol MatchResultsViewOutput: AnyObject {
     func checkIfUserNew()
     func loadMatches()
+    func initDefaultConfiguration()
 }

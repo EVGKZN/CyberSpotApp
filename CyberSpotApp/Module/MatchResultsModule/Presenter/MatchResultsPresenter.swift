@@ -19,8 +19,6 @@ class MatchResultsPresenter: MatchResultsViewOutput, MatchResultsInteractorOutpu
     }
     
     func didFinishChekingNewUser() {
-        
-        interactor.initDefaultConfiguration()
         router.presentOnboarding()
     }
     
@@ -34,5 +32,9 @@ class MatchResultsPresenter: MatchResultsViewOutput, MatchResultsInteractorOutpu
     
     func didFinishConvertingMatches(matches: [MatchDTO]) {
         view.didFinishMatchesLoading(matches: matches)
+    }
+    
+    func initDefaultConfiguration() {
+        interactor.initDefaultConfiguration()
     }
 }

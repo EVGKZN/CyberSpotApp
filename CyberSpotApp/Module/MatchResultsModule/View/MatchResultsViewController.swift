@@ -18,6 +18,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter.initDefaultConfiguration()
         presenter.loadMatches()
         matchResultsTableView.delegate = self
         matchResultsTableView.dataSource = self

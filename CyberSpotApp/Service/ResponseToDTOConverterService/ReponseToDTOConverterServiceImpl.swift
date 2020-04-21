@@ -75,8 +75,9 @@ class ReponseToDTOConverterServiceImpl: ReponseToDTOConverterService {
             let forfeit = game.forfeit ?? false
             let status = game.status ?? Constants.undefinedStatus
             let winner = formatWinner(winner: game.winner)
+            let length = game.length ??  Int64(Constants.undefinedInt)
             
-            gamesDTO.append(GameDTO(beginAt: beginAt, endAt: endAt, forfeit: forfeit, id: game.id, length: game.length, matchId: game.matchId, position: game.position, status: status, winner: winner))
+            gamesDTO.append(GameDTO(beginAt: beginAt, endAt: endAt, forfeit: forfeit, id: game.id, length: length, matchId: game.matchId, position: game.position, status: status, winner: winner))
         }
         
         return gamesDTO

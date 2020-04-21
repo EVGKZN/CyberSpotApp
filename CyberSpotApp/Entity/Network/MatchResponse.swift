@@ -37,7 +37,7 @@ struct Game: Codable {
     var endAt:                  String?
     var forfeit:                Bool?
     var id:                     Int64
-    var length:                 Int64
+    var length:                 Int64?
     var matchId:                Int64
     var position:               Int
     var status:                 String?

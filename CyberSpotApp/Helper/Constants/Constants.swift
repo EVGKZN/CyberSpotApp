@@ -28,6 +28,9 @@ struct Constants {
     static let undefinedStatus = "Неизвестно"
     static let emptyString = ""
     
+    //MARK: - Usedful Formatting Int Constants
+    static let undefinedInt = -1
+    
     //MARK: - ViewControllers Names Constants
     static let onboardingViewControllerName = "OnboardingViewController"
     
