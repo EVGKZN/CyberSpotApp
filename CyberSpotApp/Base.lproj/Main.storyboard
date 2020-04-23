@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -138,7 +138,7 @@
             </objects>
             <point key="canvasLocation" x="485.50724637681162" y="-1096.2053571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--OnboardingViewController-->
         <scene sceneID="S2t-Oz-i5v">
             <objects>
                 <viewController storyboardIdentifier="OnboardingViewController" title="OnboardingViewController" id="oTZ-11-qsU" customClass="OnboardingViewController" customModule="CyberSpotApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -188,7 +188,7 @@
             </objects>
             <point key="canvasLocation" x="1457" y="-354"/>
         </scene>
-        <!--View Controller-->
+        <!--AllMatchesViewController-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController storyboardIdentifier="MatchResultsViewController" title="AllMatchesViewController" id="8rJ-Kc-sve" customClass="MatchResultsViewController" customModule="CyberSpotApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -264,7 +264,7 @@
             </objects>
             <point key="canvasLocation" x="-541" y="-354"/>
         </scene>
-        <!--View Controller-->
+        <!--SettingsViewController-->
         <scene sceneID="dH0-Z8-My5">
             <objects>
                 <viewController title="SettingsViewController" id="pIP-2R-zC8" customClass="SettingsViewController" customModule="CyberSpotApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -339,10 +339,10 @@
         <image name="customLine" width="65" height="1"/>
         <image name="cyberSpotLogo" width="241" height="241"/>
         <image name="dota2OnIcon" width="1993" height="1993"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
-        <image name="globe" catalog="system" width="64" height="60"/>
-        <image name="heart" catalog="system" width="64" height="54"/>
-        <image name="heart.fill" catalog="system" width="64" height="54"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="mainInformationPicture" width="874" height="774"/>
         <image name="matchExamplePicture" width="1340" height="400"/>
     </resources>

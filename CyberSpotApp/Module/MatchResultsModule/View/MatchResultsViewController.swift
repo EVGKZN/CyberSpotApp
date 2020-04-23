@@ -14,7 +14,10 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     
     var presenter: MatchResultsViewOutput!
     var matches: [MatchDTO] = []
+    var refreshControl: UIRefreshControl?
+    
     private var isLoadingMoreMatches = true
+    private var isRefreshing = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         matchResultsTableView.dataSource = self
         matchResultsTableView.register(UINib(nibName: Constants.customMatchCellNibName, bundle: nil), forCellReuseIdentifier: Constants.customMatchCellReuseIdentifier)
         matchResultsTableView.estimatedRowHeight = CGFloat(Constants.preferredHeight)
+        addRefreshControl()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,7 +39,16 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     
     func didFinishMatchesLoading(matches: [MatchDTO]) {
         
-        self.matches.append(contentsOf: matches)
+        if isRefreshing {
+            self.matches = matches
+            isRefreshing = false
+            DispatchQueue.main.async {
+                self.refreshControl?.endRefreshing()
+            }
+        } else {
+            self.matches.append(contentsOf: matches)
+        }
+        
         DispatchQueue.main.async {
             self.isLoadingMoreMatches = false
             self.matchResultsTableView.reloadData()
@@ -64,5 +77,18 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
             presenter.loadMatches()
           }
         }
+    }
+    
+    func addRefreshControl() {
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refreshTable), for: .valueChanged)
+        matchResultsTableView.addSubview(refreshControl!)
+    }
+    
+    @objc func refreshTable() {
+        
+        isRefreshing = true
+        presenter.refreshMatches()
     }
 }

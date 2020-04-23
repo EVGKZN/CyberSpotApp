@@ -34,4 +34,8 @@ class MatchResultsInteractor: MatchResultsInteractorInput {
     func initDefaultConfiguration() {
         settingsConfigurationService.initDefaultConfiguration()
     }
+    
+    func refreshMatches() {
+        networkManager.refreshMatches()
+    }
 }

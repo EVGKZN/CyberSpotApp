@@ -36,4 +36,8 @@ class NetworkManagerServiceImpl: NetworkManagerService {
             }
         }.resume()
     }
+    
+    func refreshMatches() {
+        self.pageNumber = Constants.firstPageNumberToLoadMoreMatches
+    }
 }

@@ -37,4 +37,9 @@ class MatchResultsPresenter: MatchResultsViewOutput, MatchResultsInteractorOutpu
     func initDefaultConfiguration() {
         interactor.initDefaultConfiguration()
     }
+    
+    func refreshMatches() {
+        interactor.refreshMatches()
+        interactor.loadMatches()
+    }
 }

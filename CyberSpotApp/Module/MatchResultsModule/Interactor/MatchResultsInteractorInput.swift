@@ -14,4 +14,5 @@ protocol MatchResultsInteractorInput: AnyObject {
     func loadMatches()
     func convertLoadedMatches(matches: [Match])
     func initDefaultConfiguration()
+    func refreshMatches()
 }
