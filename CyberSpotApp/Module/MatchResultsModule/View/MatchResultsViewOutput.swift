@@ -12,5 +12,4 @@ protocol MatchResultsViewOutput: AnyObject {
     func checkIfUserNew()
     func loadMatches()
     func initDefaultConfiguration()
-    func loadMoreMatches()
 }

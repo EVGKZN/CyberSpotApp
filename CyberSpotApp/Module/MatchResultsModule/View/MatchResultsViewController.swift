@@ -35,7 +35,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     
     func didFinishMatchesLoading(matches: [MatchDTO]) {
         
-        self.matches = matches
+        self.matches.append(contentsOf: matches)
         DispatchQueue.main.async {
             self.isLoadingMoreMatches = false
             self.matchResultsTableView.reloadData()
@@ -61,16 +61,8 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         if offsetY > contentHeight - scrollView.frame.height {
           if !isLoadingMoreMatches {
             isLoadingMoreMatches = true
-            presenter.loadMoreMatches()
+            presenter.loadMatches()
           }
-        }
-    }
-    
-    func didFinishLoadingMoreMatches(matches: [MatchDTO]) {
-        self.matches.append(contentsOf: matches)
-        DispatchQueue.main.async {
-            self.isLoadingMoreMatches = false
-            self.matchResultsTableView.reloadData()
         }
     }
 }

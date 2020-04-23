@@ -9,6 +9,5 @@
 import Foundation
 
 protocol NetworkManagerService {
-    func getMacthes(completion: @escaping ([Match]) -> Void)
-    func loadMoreMatches(completion: @escaping ([Match]) -> Void)
+    func loadMatches(completion: @escaping ([Match]) -> Void)
 }

@@ -21,28 +21,17 @@ class MatchResultsInteractor: MatchResultsInteractorInput {
     }
     
     func loadMatches() {
-        networkManager.getMacthes { [weak self] matches in
+        networkManager.loadMatches { [weak self] matches in
             self?.presenter.didFinishLoadingMatches(matches: matches)
         }
     }
     
-    func convertFirstLoadedMatches(matches: [Match]) {
+    func convertLoadedMatches(matches: [Match]) {
         let convertedMatches = responseToDTOConverter.convertToDTO(matches: matches)
-        presenter.didFinishConvertingFirstLoadedMatches(matches: convertedMatches)
+        presenter.didFinishConvertingLoadedMatches(matches: convertedMatches)
     }
     
     func initDefaultConfiguration() {
         settingsConfigurationService.initDefaultConfiguration()
-    }
-    
-    func loadMoreMatches() {
-        networkManager.loadMoreMatches { [weak self] matches in
-            self?.presenter.didFinishLoadingMoreMatches(matches: matches)
-        }
-    }
-    
-    func convertMoreLoadedMatches(matches: [Match]) {
-        let convertedMatches = responseToDTOConverter.convertToDTO(matches: matches)
-        presenter.didFinishConvertingMoreLoadedMatches(matches: convertedMatches)
     }
 }
