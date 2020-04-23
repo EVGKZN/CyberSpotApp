@@ -38,4 +38,9 @@ class MatchResultsInteractor: MatchResultsInteractorInput {
     func refreshMatches() {
         networkManager.refreshMatches()
     }
+    
+    func isConnectedToNetwork() {
+        let result = networkManager.isConnectedToNetwork()
+        presenter.didFinishCheckingInternetConnection(result: result)
+    }
 }

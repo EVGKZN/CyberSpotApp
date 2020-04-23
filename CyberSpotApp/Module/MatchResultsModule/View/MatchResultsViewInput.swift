@@ -10,4 +10,5 @@ import Foundation
 
 protocol MatchResultsViewInput: AnyObject {
     func didFinishMatchesLoading(matches: [MatchDTO])
+    func didFinishCheckingInternetConnection(result: Bool)
 }

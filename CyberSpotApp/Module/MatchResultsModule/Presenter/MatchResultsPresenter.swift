@@ -42,4 +42,12 @@ class MatchResultsPresenter: MatchResultsViewOutput, MatchResultsInteractorOutpu
         interactor.refreshMatches()
         interactor.loadMatches()
     }
+    
+    func isConnectedToNetwork() {
+        interactor.isConnectedToNetwork()
+    }
+    
+    func didFinishCheckingInternetConnection(result: Bool) {
+        view.didFinishCheckingInternetConnection(result: result)
+    }
 }

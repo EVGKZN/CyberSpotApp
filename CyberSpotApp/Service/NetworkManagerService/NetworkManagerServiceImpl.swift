@@ -11,7 +11,7 @@ import UIKit
 
 class NetworkManagerServiceImpl: NetworkManagerService {
     
-    let urlConstructor = URLConstructorManager()
+    private let urlConstructor = URLConstructorManager()
     private var pageNumber = Constants.firstPageNumberToLoadMoreMatches
     
     func loadMatches(completion: @escaping ([Match]) -> Void) {
@@ -39,5 +39,13 @@ class NetworkManagerServiceImpl: NetworkManagerService {
     
     func refreshMatches() {
         self.pageNumber = Constants.firstPageNumberToLoadMoreMatches
+    }
+    
+    func isConnectedToNetwork() -> Bool {
+        if ReachabilityManager.isConnectedToNetwork() {
+            return true
+        } else {
+            return false
+        }
     }
 }

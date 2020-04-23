@@ -10,6 +10,7 @@ import UIKit
 
 class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var noInternetConnectionView: UIView!
     @IBOutlet weak var matchResultsTableView: UITableView!
     
     var presenter: MatchResultsViewOutput!
@@ -23,6 +24,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         super.viewDidLoad()
         
         presenter.initDefaultConfiguration()
+        presenter.isConnectedToNetwork()
         presenter.loadMatches()
         matchResultsTableView.delegate = self
         matchResultsTableView.dataSource = self
@@ -90,5 +92,14 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         
         isRefreshing = true
         presenter.refreshMatches()
+    }
+    
+    func didFinishCheckingInternetConnection(result: Bool) {
+        
+        if result {
+            noInternetConnectionView.isHidden = true
+        } else {
+            matchResultsTableView.isHidden = true
+        }
     }
 }

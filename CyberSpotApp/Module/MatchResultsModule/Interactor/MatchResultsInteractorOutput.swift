@@ -13,4 +13,5 @@ protocol MatchResultsInteractorOutput: AnyObject {
     func didFinishChekingNewUser()
     func didFinishLoadingMatches(matches: [Match])
     func didFinishConvertingLoadedMatches(matches: [MatchDTO])
+    func didFinishCheckingInternetConnection(result: Bool)
 }

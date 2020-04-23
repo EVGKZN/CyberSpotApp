@@ -33,6 +33,7 @@
 		FAB54CAA24433C6C00E582BF /* MatchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54CA924433C6C00E582BF /* MatchDTO.swift */; };
 		FAB54CAD24433CFE00E582BF /* ReponseToDTOConverterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54CAC24433CFE00E582BF /* ReponseToDTOConverterService.swift */; };
 		FAB54CAF24433D1800E582BF /* ReponseToDTOConverterServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54CAE24433D1800E582BF /* ReponseToDTOConverterServiceImpl.swift */; };
+		FABA7E63245257BB00ED654D /* RachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA7E62245257BB00ED654D /* RachabilityManager.swift */; };
 		FABF882B243A2AD1006043F1 /* MatchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF882A243A2AD1006043F1 /* MatchResponse.swift */; };
 		FABF882E243A36F7006043F1 /* NetworkManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF882D243A36F7006043F1 /* NetworkManagerService.swift */; };
 		FABF8830243A370C006043F1 /* NetworkManagerServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF882F243A370C006043F1 /* NetworkManagerServiceImpl.swift */; };
@@ -90,6 +91,7 @@
 		FAB54CA924433C6C00E582BF /* MatchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDTO.swift; sourceTree = "<group>"; };
 		FAB54CAC24433CFE00E582BF /* ReponseToDTOConverterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReponseToDTOConverterService.swift; sourceTree = "<group>"; };
 		FAB54CAE24433D1800E582BF /* ReponseToDTOConverterServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReponseToDTOConverterServiceImpl.swift; sourceTree = "<group>"; };
+		FABA7E62245257BB00ED654D /* RachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RachabilityManager.swift; sourceTree = "<group>"; };
 		FABF882A243A2AD1006043F1 /* MatchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResponse.swift; sourceTree = "<group>"; };
 		FABF882D243A36F7006043F1 /* NetworkManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerService.swift; sourceTree = "<group>"; };
 		FABF882F243A370C006043F1 /* NetworkManagerServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerServiceImpl.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				FA2163EB244C9E7300F58F95 /* URLConstructorManager.swift */,
+				FABA7E62245257BB00ED654D /* RachabilityManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				FA2163E7244C93E000F58F95 /* SettingsInteractorInput.swift in Sources */,
 				FA07F09624448B2E00A85E31 /* MatchTableViewCell.swift in Sources */,
 				FAE8E27A2438B03000B881B7 /* MatchResultsPresenter.swift in Sources */,
+				FABA7E63245257BB00ED654D /* RachabilityManager.swift in Sources */,
 				FAE8E2742438AFE000B881B7 /* MatchResultsViewController.swift in Sources */,
 				FAE8E25C2438A83B00B881B7 /* OnboardingPresenter.swift in Sources */,
 				FA09CA472438A438002164A3 /* NewUserService.swift in Sources */,

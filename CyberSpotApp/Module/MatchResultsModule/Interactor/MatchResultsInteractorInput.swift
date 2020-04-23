@@ -15,4 +15,5 @@ protocol MatchResultsInteractorInput: AnyObject {
     func convertLoadedMatches(matches: [Match])
     func initDefaultConfiguration()
     func refreshMatches()
+    func isConnectedToNetwork() 
 }

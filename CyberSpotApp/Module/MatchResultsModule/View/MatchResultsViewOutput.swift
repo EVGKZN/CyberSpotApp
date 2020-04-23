@@ -13,4 +13,5 @@ protocol MatchResultsViewOutput: AnyObject {
     func loadMatches()
     func initDefaultConfiguration()
     func refreshMatches()
+    func isConnectedToNetwork()
 }
