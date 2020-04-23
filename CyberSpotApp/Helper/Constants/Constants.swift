@@ -20,6 +20,8 @@ struct Constants {
     
     //MARK: - Network Constants
     static let apiMatchesStringUrl = "https://api.pandascore.co/matches/past?sort=-end_at&filter[videogame]=4,3&page[size]=30&token=Y3WnVBNBbUh54mUUZozfLIi7MzPz6ZiEAYIBxUNi5uG6nD71i14"
+    static let firstPageNumberToLoadMoreMatches = 2
+    static let pageNumberIncreaseValue = 1
     
     //MARK: - UserDefaults Keys Constants
     static let userDefaultsNewUserKey = "isUserNew"

@@ -14,6 +14,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     
     var presenter: MatchResultsViewOutput!
     var matches: [MatchDTO] = []
+    private var isLoadingMoreMatches = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,8 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         
         self.matches = matches
         DispatchQueue.main.async {
-           self.matchResultsTableView.reloadData()
+            self.isLoadingMoreMatches = false
+            self.matchResultsTableView.reloadData()
         }
     }
     
@@ -49,5 +51,26 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         let cell = matchResultsTableView.dequeueReusableCell(withIdentifier: Constants.customMatchCellReuseIdentifier) as! MatchTableViewCell
         cell.configure(with: matches[indexPath.row])
         return cell
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if offsetY > contentHeight - scrollView.frame.height {
+          if !isLoadingMoreMatches {
+            isLoadingMoreMatches = true
+            presenter.loadMoreMatches()
+          }
+        }
+    }
+    
+    func didFinishLoadingMoreMatches(matches: [MatchDTO]) {
+        self.matches.append(contentsOf: matches)
+        DispatchQueue.main.async {
+            self.isLoadingMoreMatches = false
+            self.matchResultsTableView.reloadData()
+        }
     }
 }

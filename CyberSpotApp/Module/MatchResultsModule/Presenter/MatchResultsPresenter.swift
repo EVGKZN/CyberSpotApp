@@ -27,14 +27,26 @@ class MatchResultsPresenter: MatchResultsViewOutput, MatchResultsInteractorOutpu
     }
     
     func didFinishLoadingMatches(matches: [Match]) {
-        interactor.convertMatches(matches: matches)
+        interactor.convertFirstLoadedMatches(matches: matches)
     }
     
-    func didFinishConvertingMatches(matches: [MatchDTO]) {
+    func didFinishConvertingFirstLoadedMatches(matches: [MatchDTO]) {
         view.didFinishMatchesLoading(matches: matches)
     }
     
     func initDefaultConfiguration() {
         interactor.initDefaultConfiguration()
+    }
+    
+    func loadMoreMatches() {
+        interactor.loadMoreMatches()
+    }
+    
+    func didFinishLoadingMoreMatches(matches: [Match]) {
+        interactor.convertMoreLoadedMatches(matches: matches)
+    }
+    
+    func didFinishConvertingMoreLoadedMatches(matches: [MatchDTO]) {
+        view.didFinishLoadingMoreMatches(matches: matches)
     }
 }

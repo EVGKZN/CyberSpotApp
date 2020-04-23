@@ -26,12 +26,23 @@ class MatchResultsInteractor: MatchResultsInteractorInput {
         }
     }
     
-    func convertMatches(matches: [Match]) {
+    func convertFirstLoadedMatches(matches: [Match]) {
         let convertedMatches = responseToDTOConverter.convertToDTO(matches: matches)
-        presenter.didFinishConvertingMatches(matches: convertedMatches)
+        presenter.didFinishConvertingFirstLoadedMatches(matches: convertedMatches)
     }
     
     func initDefaultConfiguration() {
         settingsConfigurationService.initDefaultConfiguration()
+    }
+    
+    func loadMoreMatches() {
+        networkManager.loadMoreMatches { [weak self] matches in
+            self?.presenter.didFinishLoadingMoreMatches(matches: matches)
+        }
+    }
+    
+    func convertMoreLoadedMatches(matches: [Match]) {
+        let convertedMatches = responseToDTOConverter.convertToDTO(matches: matches)
+        presenter.didFinishConvertingMoreLoadedMatches(matches: convertedMatches)
     }
 }

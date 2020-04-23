@@ -10,7 +10,7 @@ import Foundation
 
 class URLConstructorManager {
     
-    func getMatchesAPIUrl() -> String {
+    private func getVideogameFilter() -> String {
         
         guard let videogamesIdArray = UserDefaults.standard.array(forKey: Constants.userDefaultsVideogamesIdArrayKey) as? [Int] else { return Constants.emptyString }
         
@@ -28,10 +28,28 @@ class URLConstructorManager {
             }
         }
         
+        return videogameFilter
+    }
+    
+    func getMatchesAPIUrl() -> String {
+        
+        let videogameFilter = getVideogameFilter()
+        
         if videogameFilter == Constants.emptyString {
             return Constants.emptyString
         } else {
             return "https://api.pandascore.co/matches/past?sort=-end_at&filter[videogame]=\(videogameFilter)&page[size]=30&token=Y3WnVBNBbUh54mUUZozfLIi7MzPz6ZiEAYIBxUNi5uG6nD71i14"
+        }
+    }
+    
+    func getMatchesAPIUrlWithPageNumber(with pageNumber: Int) -> String {
+        
+        let videogameFilter = getVideogameFilter()
+        
+        if videogameFilter == Constants.emptyString {
+            return Constants.emptyString
+        } else {
+            return "https://api.pandascore.co/matches/past?sort=-end_at&filter[videogame]=\(videogameFilter)&page[size]=30&page[number]=\(pageNumber)&token=Y3WnVBNBbUh54mUUZozfLIi7MzPz6ZiEAYIBxUNi5uG6nD71i14"
         }
     }
 }
