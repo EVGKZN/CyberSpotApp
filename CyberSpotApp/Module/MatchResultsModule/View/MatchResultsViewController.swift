@@ -100,6 +100,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         
         isRefreshing = true
         presenter.refreshMatches()
+        matchResultsTableView.setContentOffset(.zero, animated: true)
     }
     
     func didFinishCheckingInternetConnection(result: Bool) {
@@ -118,9 +119,17 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     func showEmptyFilterErrorAlertController() {
         
         let alertController = UIAlertController(title: Constants.emptyFilterAlertControllerTitle, message: Constants.emptyFilterAlertControllerMessage, preferredStyle: .alert)
-        let alertOkAction = UIAlertAction(title: Constants.emptyFilterOkActionTitle, style: .default, handler: nil)
+        let alertOkAction = UIAlertAction(title: Constants.emptyFilterOkActionTitle, style: .default) {
+            UIAlertAction in
+            
+            if self.isRefreshing {
+                self.isRefreshing = false
+                DispatchQueue.main.async {
+                    self.refreshControl?.endRefreshing()
+                }
+            }
+        }
         alertController.addAction(alertOkAction)
-        
         present(alertController, animated: true)
     }
 }
