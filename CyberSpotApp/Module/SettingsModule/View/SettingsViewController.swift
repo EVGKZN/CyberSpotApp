@@ -23,13 +23,17 @@ class SettingsViewController: UIViewController, SettingsViewInput {
     }
     
     @IBAction func didPressedDota2Button(_ sender: Any) {
+        
         presenter.didPressedDota2SettingsButton()
         presenter.getCurrentDota2ButtonStateImage()
+        presenter.notifyToUpdateMatchesView()
     }
     
     @IBAction func didPressedCSGOButton(_ sender: Any) {
+        
         presenter.didPressedCSGOSettingsButton()
         presenter.getCurrentCSGOButtonStateImage()
+        presenter.notifyToUpdateMatchesView()
     }
     
     func didFinishGettingCurrentDota2ButtonStateImage(with image: UIImage) {

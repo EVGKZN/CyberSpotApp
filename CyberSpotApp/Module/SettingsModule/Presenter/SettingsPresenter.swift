@@ -37,4 +37,8 @@ class SettingsPresenter: SettingsViewOutput, SettingsInteractorOutput {
     func didFinishGettingCurrentCSGOButtonStateImage(with image: UIImage) {
         view.didFinishGettingCurrentCSGOButtonStateImage(with: image)
     }
+    
+    func notifyToUpdateMatchesView() {
+        interactor.notifyToUpdateMatchesView()
+    }
 }

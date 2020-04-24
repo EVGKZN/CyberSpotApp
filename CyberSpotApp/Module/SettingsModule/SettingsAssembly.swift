@@ -21,6 +21,7 @@ class SettingsAssembly: NSObject {
         let presenter = SettingsPresenter()
         let interactor = SettingsInteractor()
         let settingsConfigurationService = SettingsConfigurationServiceImpl()
+        let notificationManagerService = NotificationManagerServiceImpl()
         
         view.presenter = presenter
         
@@ -29,5 +30,6 @@ class SettingsAssembly: NSObject {
         
         interactor.presenter = presenter
         interactor.settingsConfigurationService = settingsConfigurationService
+        interactor.notificationManagerService = notificationManagerService
     }
 }

@@ -67,5 +67,8 @@ struct Constants {
     
     static let defaultVideogamesIdArray = [3,4]
     static let userDefaultsVideogamesIdArrayKey = "videogamesIdArray"
+    
+    //MARK: - Notification Center Names Constants
+    static let updateMatchesViewNotificationName = "updateMatchesViewNotificationKey"
 }
 

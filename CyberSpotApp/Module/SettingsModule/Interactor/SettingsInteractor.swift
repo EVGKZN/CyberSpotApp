@@ -12,7 +12,8 @@ import UIKit
 class SettingsInteractor: SettingsInteractorInput {
     
     weak var presenter: SettingsInteractorOutput!
-    var settingsConfigurationService: SettingsConfigurationService! 
+    var settingsConfigurationService: SettingsConfigurationService!
+    var notificationManagerService: NotificationManagerService!
     
     func getCurrentDota2ButtonStateImage() {
         
@@ -32,5 +33,9 @@ class SettingsInteractor: SettingsInteractorInput {
     
     func didPressedCSGOSettingsButton() {
         settingsConfigurationService.didPressedCSGOSettingsButton()
+    }
+    
+    func notifyToUpdateMatchesView() {
+        notificationManagerService.notifyToUpdateMatchesView()
     }
 }

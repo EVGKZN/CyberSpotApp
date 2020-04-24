@@ -15,4 +15,5 @@ protocol SettingsInteractorInput: AnyObject {
     func getCurrentCSGOButtonStateImage()
     func didPressedDota2SettingsButton()
     func didPressedCSGOSettingsButton()
+    func notifyToUpdateMatchesView()
 }

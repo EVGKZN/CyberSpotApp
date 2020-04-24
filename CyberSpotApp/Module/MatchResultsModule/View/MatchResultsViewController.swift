@@ -23,14 +23,17 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter.initDefaultConfiguration()
-        presenter.isConnectedToNetwork()
-        presenter.loadMatches()
         matchResultsTableView.delegate = self
         matchResultsTableView.dataSource = self
         matchResultsTableView.register(UINib(nibName: Constants.customMatchCellNibName, bundle: nil), forCellReuseIdentifier: Constants.customMatchCellReuseIdentifier)
         matchResultsTableView.estimatedRowHeight = CGFloat(Constants.preferredHeight)
+        
         addRefreshControl()
+        addObservers()
+        
+        presenter.initDefaultConfiguration()
+        presenter.isConnectedToNetwork()
+        presenter.loadMatches()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -101,5 +104,9 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         } else {
             matchResultsTableView.isHidden = true
         }
+    }
+    
+    func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshTable), name: Notification.Name(rawValue: Constants.updateMatchesViewNotificationName), object: nil)
     }
 }
