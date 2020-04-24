@@ -11,6 +11,7 @@ import SDWebImage
 
 class MatchTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var leagueLabel: UILabel!
     @IBOutlet weak var videogameImageImageView: UIImageView!
     @IBOutlet weak var videogameNameLabel: UILabel!
     @IBOutlet weak var firstOpponentImageImageView: UIImageView!
@@ -46,5 +47,6 @@ class MatchTableViewCell: UITableViewCell {
         
         scoreLabel.text = "\(match.results[Constants.firstOpponentNumber].score) : \(match.results[Constants.secondOpponentNumber].score)"
         dateTimeLabel.text = match.scheduledAt
+        leagueLabel.text = match.league.name
     }
 }
