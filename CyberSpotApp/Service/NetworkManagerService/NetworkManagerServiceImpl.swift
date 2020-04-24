@@ -18,7 +18,12 @@ class NetworkManagerServiceImpl: NetworkManagerService {
         
         var matches: [Match] = []
         
-        guard let url = URL(string: urlConstructor.getMatchesAPIUrl(with: pageNumber)) else { return }
+        guard let url = URL(string: urlConstructor.getMatchesAPIUrl(with: pageNumber))
+            else {
+                completion(matches)
+                return
+                
+        }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             

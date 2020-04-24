@@ -44,6 +44,11 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     
     func didFinishMatchesLoading(matches: [MatchDTO]) {
         
+        if matches.isEmpty {
+            showEmptyFilterErrorAlertController()
+            return
+        }
+        
         if isRefreshing {
             self.matches = matches
             isRefreshing = false
@@ -108,5 +113,14 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     
     func addObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(refreshTable), name: Notification.Name(rawValue: Constants.updateMatchesViewNotificationName), object: nil)
+    }
+    
+    func showEmptyFilterErrorAlertController() {
+        
+        let alertController = UIAlertController(title: Constants.emptyFilterAlertControllerTitle, message: Constants.emptyFilterAlertControllerMessage, preferredStyle: .alert)
+        let alertOkAction = UIAlertAction(title: Constants.emptyFilterOkActionTitle, style: .default, handler: nil)
+        alertController.addAction(alertOkAction)
+        
+        present(alertController, animated: true)
     }
 }
