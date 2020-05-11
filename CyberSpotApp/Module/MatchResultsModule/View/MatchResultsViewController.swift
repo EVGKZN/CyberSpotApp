@@ -33,10 +33,11 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         addRefreshControl()
         addObservers()
         
+        self.showSpinner(onView: self.view)
+        
         presenter.initDefaultConfiguration()
         presenter.isConnectedToNetwork()
         presenter.loadMatches()
-        self.showSpinner(onView: self.view)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -129,7 +130,13 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         } else {
             matchResultsTableView.isHidden = true
             noInternetConnectionView.isHidden = false
+            if isInitiallizing {
+                
+                self.removeSpinner()
+                isInitiallizing = false
+            }
         }
+        
     }
     
     func addObservers() {
