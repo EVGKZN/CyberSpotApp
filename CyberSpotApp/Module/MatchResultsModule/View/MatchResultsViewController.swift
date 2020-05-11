@@ -51,12 +51,6 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     
     func didFinishMatchesLoading(matches: [MatchDTO]) {
         
-        if isInitiallizing {
-            
-            self.removeSpinner()
-            isInitiallizing = false
-        }
-        
         if matches.isEmpty {
             showEmptyFilterErrorAlertController()
             return
@@ -73,8 +67,15 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         }
         
         DispatchQueue.main.async {
+            
             self.isLoadingMoreMatches = false
             self.matchResultsTableView.reloadData()
+        }
+        
+        if isInitiallizing {
+            
+            self.removeSpinner()
+            isInitiallizing = false
         }
     }
     
