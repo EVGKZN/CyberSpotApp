@@ -19,6 +19,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     
     private var isLoadingMoreMatches = true
     private var isRefreshing = false
+    private var isInitiallizing = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         matchResultsTableView.dataSource = self
         matchResultsTableView.register(UINib(nibName: Constants.customMatchResultsCellNibName, bundle: nil), forCellReuseIdentifier: Constants.customMatchCellReuseIdentifier)
         matchResultsTableView.estimatedRowHeight = CGFloat(Constants.preferredHeight)
+        matchResultsTableView.isHidden = true
         
         addRefreshControl()
         addObservers()
@@ -34,6 +36,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         presenter.initDefaultConfiguration()
         presenter.isConnectedToNetwork()
         presenter.loadMatches()
+        self.showSpinner(onView: self.view)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,6 +50,12 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     }
     
     func didFinishMatchesLoading(matches: [MatchDTO]) {
+        
+        if isInitiallizing {
+            
+            self.removeSpinner()
+            isInitiallizing = false
+        }
         
         if matches.isEmpty {
             showEmptyFilterErrorAlertController()
@@ -111,8 +120,10 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         
         if result {
             noInternetConnectionView.isHidden = true
+            matchResultsTableView.isHidden = false
         } else {
             matchResultsTableView.isHidden = true
+            noInternetConnectionView.isHidden = false
         }
     }
     

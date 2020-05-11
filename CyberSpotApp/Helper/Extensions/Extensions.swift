@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension MatchDTO {
     
@@ -83,5 +84,32 @@ extension MatchModel {
         let matchDTO = MatchDTO(beginAt: self.beginAt, endAt: self.endAt, forfeit: self.forfeit, games: games, id: self.id, league: league, matchType: self.matchType, name: self.name, numberOfGames: self.numberOfGames, opponents: opponents, originalScheduledAt: self.originalScheduledAt, rescheduled: self.rescheduled, results: results, scheduledAt: self.scheduledAt, serie: serie, slug: self.slug, status: self.status, tournament: tournament, videogame: videogame)
         
         return matchDTO
+    }
+}
+
+var vSpinner : UIView?
+
+extension UIViewController {
+    func showSpinner(onView : UIView) {
+        let spinnerView = UIView.init(frame: UIScreen.main.bounds)
+        spinnerView.backgroundColor = UIColor.white
+        let ai = UIActivityIndicatorView.init(style: .large)
+        ai.color = UIColor.black
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
+        }
+        
+        vSpinner = spinnerView
+    }
+    
+    func removeSpinner() {
+        DispatchQueue.main.async {
+            vSpinner?.removeFromSuperview()
+            vSpinner = nil
+        }
     }
 }
