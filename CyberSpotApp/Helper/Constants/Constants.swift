@@ -74,7 +74,7 @@ struct Constants {
     static let updateSavedMatchesViewNotificationName = "updateSavedMatchesViewNotificationKey"
     
     //MARK: - Empty Filter Alert Controller Constants
-    static let emptyFilterAlertControllerTitle = "ERROR!"
+    static let emptyFilterAlertControllerTitle = "ERROR"
     static let emptyFilterAlertControllerMessage = "You need to choose at least one filter to present matches. Change your settings and try again!"
     static let emptyFilterOkActionTitle = "Got it!"
 }

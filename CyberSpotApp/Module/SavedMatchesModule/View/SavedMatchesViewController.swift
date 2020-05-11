@@ -23,6 +23,7 @@ class SavedMatchesViewController: UIViewController, UITableViewDelegate, UITable
         savedMatchesTableView.dataSource = self
         savedMatchesTableView.register(UINib(nibName: Constants.customSavedMatchesCellNibName, bundle: nil), forCellReuseIdentifier: Constants.customMatchCellReuseIdentifier)
         savedMatchesTableView.estimatedRowHeight = CGFloat(Constants.preferredHeight)
+        savedMatchesTableView.tableFooterView = UIView()
         
         addObservers()
         
