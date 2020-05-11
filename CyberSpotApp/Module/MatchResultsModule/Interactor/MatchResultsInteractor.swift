@@ -15,6 +15,8 @@ class MatchResultsInteractor: MatchResultsInteractorInput {
     var networkManager: NetworkManagerService!
     var responseToDTOConverter: ReponseToDTOConverterService!
     var settingsConfigurationService: SettingsConfigurationService!
+    var databaseManager: RealmDatabaseManagerService!
+    var notificationManager: NotificationManagerService!
     
     func checkIfUserNew() {
         if newUserService.isUserNew() { presenter.didFinishChekingNewUser() }
@@ -43,4 +45,12 @@ class MatchResultsInteractor: MatchResultsInteractorInput {
         let result = networkManager.isConnectedToNetwork()
         presenter.didFinishCheckingInternetConnection(result: result)
     }
+    
+    func saveMatch(match: MatchDTO) {
+        
+        databaseManager.saveMatch(match: match) { isSaved in
+            if isSaved { self.notificationManager.notifyToUpdateSavedMatchesView() }
+        }
+    }
+    
 }

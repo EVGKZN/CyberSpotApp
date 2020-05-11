@@ -13,4 +13,9 @@ class NotificationManagerServiceImpl: NotificationManagerService {
     func notifyToUpdateMatchesView() {
         NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.updateMatchesViewNotificationName), object: nil)
     }
+    
+    func notifyToUpdateSavedMatchesView() {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.updateSavedMatchesViewNotificationName), object: nil)
+    }
+    
 }

@@ -7,4 +7,5 @@ target 'CyberSpotApp' do
 
   # Pods for CyberSpotApp
   pod 'SDWebImage'
+  pod 'RealmSwift'
 end

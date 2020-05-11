@@ -53,7 +53,8 @@ struct Constants {
     static let customMatchCellReuseIdentifier = "customMatchCell"
     
     //MARK: - Custom Cell's Nib Names Constants
-    static let customMatchCellNibName = "MatchTableViewCell"
+    static let customMatchResultsCellNibName = "MatchResultsTableViewCell"
+    static let customSavedMatchesCellNibName = "SavedMatchesTableViewCell"
     
     //MARK: - Settings View Button's Images
     static let csgoOnIconImage = "csgoOnIcon"
@@ -70,6 +71,7 @@ struct Constants {
     
     //MARK: - Notification Center Names Constants
     static let updateMatchesViewNotificationName = "updateMatchesViewNotificationKey"
+    static let updateSavedMatchesViewNotificationName = "updateSavedMatchesViewNotificationKey"
     
     //MARK: - Empty Filter Alert Controller Constants
     static let emptyFilterAlertControllerTitle = "ERROR!"

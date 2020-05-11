@@ -86,8 +86,9 @@ class ReponseToDTOConverterServiceImpl: ReponseToDTOConverterService {
     private func formatWinner(winner: Winner) -> WinnerDTO {
         
         let type = winner.type ?? Constants.undefinedStatus
+        let id = winner.id ?? Int64(Constants.undefinedInt)
         
-        return WinnerDTO(id: winner.id, type: type)
+        return WinnerDTO(id: id, type: type)
     }
     
     private func formatLeague(league: League) -> LeagueDTO {

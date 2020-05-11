@@ -1,15 +1,14 @@
 //
-//  MatchTableViewCell.swift
+//  SavedMatchesTableViewCell.swift
 //  CyberSpotApp
 //
-//  Created by Евгений on 13.04.2020.
+//  Created by Евгений on 11.05.2020.
 //  Copyright © 2020 Евгений Кузьмин. All rights reserved.
 //
 
 import UIKit
-import SDWebImage
 
-class MatchTableViewCell: UITableViewCell {
+class SavedMatchesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var leagueLabel: UILabel!
     @IBOutlet weak var videogameImageImageView: UIImageView!
@@ -21,6 +20,9 @@ class MatchTableViewCell: UITableViewCell {
     @IBOutlet weak var firstOpponentNameLabel: UILabel!
     @IBOutlet weak var secondOpponentNameLabel: UILabel!
     
+    private var match: MatchDTO!
+    private var presenterDelegate: SavedMatchesViewOutput!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -28,14 +30,17 @@ class MatchTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-    }
-    
-    @IBAction func didPressLikeMatchButton(_ sender: Any) {
         
     }
     
-    func configure(with match: MatchDTO) {
+    @IBAction func didPressLikeMatchButton(_ sender: Any) {
+        presenterDelegate.deleteMatch(match: match)
+    }
+    
+    func configure(with match: MatchDTO, presenterDelegate: SavedMatchesViewOutput) {
+        
+        self.match = match
+        self.presenterDelegate = presenterDelegate
         
         videogameImageImageView.image = match.videogame.name == Constants.dota2Name ? UIImage(named: Constants.dota2ImageName) : UIImage(named: Constants.csgoImageName)
         videogameNameLabel.text = match.videogame.name == Constants.dota2Name ? Constants.dota2Name.uppercased() : Constants.csgoName

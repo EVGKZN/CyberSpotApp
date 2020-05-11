@@ -25,7 +25,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         
         matchResultsTableView.delegate = self
         matchResultsTableView.dataSource = self
-        matchResultsTableView.register(UINib(nibName: Constants.customMatchCellNibName, bundle: nil), forCellReuseIdentifier: Constants.customMatchCellReuseIdentifier)
+        matchResultsTableView.register(UINib(nibName: Constants.customMatchResultsCellNibName, bundle: nil), forCellReuseIdentifier: Constants.customMatchCellReuseIdentifier)
         matchResultsTableView.estimatedRowHeight = CGFloat(Constants.preferredHeight)
         
         addRefreshControl()
@@ -40,6 +40,10 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         super.viewDidAppear(animated)
         
         presenter.checkIfUserNew()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     func didFinishMatchesLoading(matches: [MatchDTO]) {
@@ -71,8 +75,8 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = matchResultsTableView.dequeueReusableCell(withIdentifier: Constants.customMatchCellReuseIdentifier) as! MatchTableViewCell
-        cell.configure(with: matches[indexPath.row])
+        let cell = matchResultsTableView.dequeueReusableCell(withIdentifier: Constants.customMatchCellReuseIdentifier) as! MatchResultsTableViewCell
+        cell.configure(with: matches[indexPath.row], presenterDelegate: presenter)
         return cell
     }
     

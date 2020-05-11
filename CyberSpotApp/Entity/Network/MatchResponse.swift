@@ -109,6 +109,6 @@ struct Team: Codable {
 
 struct Winner: Codable {
     
-    var id:                     Int64
+    var id:                     Int64?
     var type:                   String?
 }

@@ -50,4 +50,9 @@ class MatchResultsPresenter: MatchResultsViewOutput, MatchResultsInteractorOutpu
     func didFinishCheckingInternetConnection(result: Bool) {
         view.didFinishCheckingInternetConnection(result: result)
     }
+    
+    func saveMatch(match: MatchDTO) {
+        interactor.saveMatch(match: match)
+    }
+    
 }

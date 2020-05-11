@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7F77337B5B1B762298B346AF /* Pods_CyberSpotApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1DEC28403CA724D9939E4D /* Pods_CyberSpotApp.framework */; };
-		FA07F09624448B2E00A85E31 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07F09424448B2E00A85E31 /* MatchTableViewCell.swift */; };
-		FA07F09724448B2E00A85E31 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA07F09524448B2E00A85E31 /* MatchTableViewCell.xib */; };
+		FA07F09624448B2E00A85E31 /* MatchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07F09424448B2E00A85E31 /* MatchResultsTableViewCell.swift */; };
+		FA07F09724448B2E00A85E31 /* MatchResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA07F09524448B2E00A85E31 /* MatchResultsTableViewCell.xib */; };
 		FA09CA412438A17E002164A3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09CA402438A17E002164A3 /* OnboardingViewController.swift */; };
 		FA09CA472438A438002164A3 /* NewUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09CA462438A438002164A3 /* NewUserService.swift */; };
 		FA09CA492438A4AC002164A3 /* NewUserServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09CA482438A4AC002164A3 /* NewUserServiceImpl.swift */; };
@@ -30,6 +30,20 @@
 		FA628C2E24223D3100B1DE4A /* CyberSpotApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA628C2C24223D3100B1DE4A /* CyberSpotApp.xcdatamodeld */; };
 		FA628C3024223D3200B1DE4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA628C2F24223D3200B1DE4A /* Assets.xcassets */; };
 		FA628C3324223D3200B1DE4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA628C3124223D3200B1DE4A /* LaunchScreen.storyboard */; };
+		FA9886F3246998F50018BDFE /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9886F2246998F50018BDFE /* MatchModel.swift */; };
+		FA9886F62469AED10018BDFE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9886F52469AED10018BDFE /* Extensions.swift */; };
+		FA9886F92469BBAB0018BDFE /* RealmDatabaseManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9886F82469BBAB0018BDFE /* RealmDatabaseManagerService.swift */; };
+		FA9886FB2469BBC30018BDFE /* RealmDatabaseManagerServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9886FA2469BBC30018BDFE /* RealmDatabaseManagerServiceImpl.swift */; };
+		FA9887012469BEF80018BDFE /* SavedMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9887002469BEF80018BDFE /* SavedMatchesViewController.swift */; };
+		FA9887052469C1D90018BDFE /* SavedMatchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9887032469C1D90018BDFE /* SavedMatchesTableViewCell.swift */; };
+		FA9887062469C1D90018BDFE /* SavedMatchesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9887042469C1D90018BDFE /* SavedMatchesTableViewCell.xib */; };
+		FA9887082469C5810018BDFE /* SavedMatchesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9887072469C5810018BDFE /* SavedMatchesViewInput.swift */; };
+		FA98870A2469C5940018BDFE /* SavedMatchesViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9887092469C5940018BDFE /* SavedMatchesViewOutput.swift */; };
+		FA98870C2469CA690018BDFE /* SavedMatchesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98870B2469CA690018BDFE /* SavedMatchesPresenter.swift */; };
+		FA98870E2469CABE0018BDFE /* SavedMatchesInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98870D2469CABE0018BDFE /* SavedMatchesInteractorInput.swift */; };
+		FA9887102469CAD40018BDFE /* SavedMatchesInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98870F2469CAD40018BDFE /* SavedMatchesInteractorOutput.swift */; };
+		FA9887122469CAEB0018BDFE /* SavedMatchesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9887112469CAEB0018BDFE /* SavedMatchesInteractor.swift */; };
+		FA9887142469CB3B0018BDFE /* SavedMatchesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9887132469CB3B0018BDFE /* SavedMatchesAssembly.swift */; };
 		FAB54CAA24433C6C00E582BF /* MatchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54CA924433C6C00E582BF /* MatchDTO.swift */; };
 		FAB54CAD24433CFE00E582BF /* ReponseToDTOConverterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54CAC24433CFE00E582BF /* ReponseToDTOConverterService.swift */; };
 		FAB54CAF24433D1800E582BF /* ReponseToDTOConverterServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54CAE24433D1800E582BF /* ReponseToDTOConverterServiceImpl.swift */; };
@@ -66,8 +80,8 @@
 		34C6459B8913A52AE56670BF /* Pods-CyberSpotApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyberSpotApp.debug.xcconfig"; path = "Target Support Files/Pods-CyberSpotApp/Pods-CyberSpotApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4A1DEC28403CA724D9939E4D /* Pods_CyberSpotApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CyberSpotApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922076F941964EFFE8973DD9 /* Pods-CyberSpotApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyberSpotApp.release.xcconfig"; path = "Target Support Files/Pods-CyberSpotApp/Pods-CyberSpotApp.release.xcconfig"; sourceTree = "<group>"; };
-		FA07F09424448B2E00A85E31 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
-		FA07F09524448B2E00A85E31 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
+		FA07F09424448B2E00A85E31 /* MatchResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResultsTableViewCell.swift; sourceTree = "<group>"; };
+		FA07F09524448B2E00A85E31 /* MatchResultsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchResultsTableViewCell.xib; sourceTree = "<group>"; };
 		FA09CA402438A17E002164A3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		FA09CA462438A438002164A3 /* NewUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserService.swift; sourceTree = "<group>"; };
 		FA09CA482438A4AC002164A3 /* NewUserServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserServiceImpl.swift; sourceTree = "<group>"; };
@@ -90,6 +104,20 @@
 		FA628C2F24223D3200B1DE4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA628C3224223D3200B1DE4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA628C3424223D3200B1DE4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA9886F2246998F50018BDFE /* MatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
+		FA9886F52469AED10018BDFE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FA9886F82469BBAB0018BDFE /* RealmDatabaseManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabaseManagerService.swift; sourceTree = "<group>"; };
+		FA9886FA2469BBC30018BDFE /* RealmDatabaseManagerServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabaseManagerServiceImpl.swift; sourceTree = "<group>"; };
+		FA9887002469BEF80018BDFE /* SavedMatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMatchesViewController.swift; sourceTree = "<group>"; };
+		FA9887032469C1D90018BDFE /* SavedMatchesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMatchesTableViewCell.swift; sourceTree = "<group>"; };
+		FA9887042469C1D90018BDFE /* SavedMatchesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedMatchesTableViewCell.xib; sourceTree = "<group>"; };
+		FA9887072469C5810018BDFE /* SavedMatchesViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMatchesViewInput.swift; sourceTree = "<group>"; };
+		FA9887092469C5940018BDFE /* SavedMatchesViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMatchesViewOutput.swift; sourceTree = "<group>"; };
+		FA98870B2469CA690018BDFE /* SavedMatchesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMatchesPresenter.swift; sourceTree = "<group>"; };
+		FA98870D2469CABE0018BDFE /* SavedMatchesInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMatchesInteractorInput.swift; sourceTree = "<group>"; };
+		FA98870F2469CAD40018BDFE /* SavedMatchesInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMatchesInteractorOutput.swift; sourceTree = "<group>"; };
+		FA9887112469CAEB0018BDFE /* SavedMatchesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMatchesInteractor.swift; sourceTree = "<group>"; };
+		FA9887132469CB3B0018BDFE /* SavedMatchesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMatchesAssembly.swift; sourceTree = "<group>"; };
 		FAB54CA924433C6C00E582BF /* MatchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDTO.swift; sourceTree = "<group>"; };
 		FAB54CAC24433CFE00E582BF /* ReponseToDTOConverterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReponseToDTOConverterService.swift; sourceTree = "<group>"; };
 		FAB54CAE24433D1800E582BF /* ReponseToDTOConverterServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReponseToDTOConverterServiceImpl.swift; sourceTree = "<group>"; };
@@ -154,18 +182,19 @@
 		FA07F09224448B0B00A85E31 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FA07F09324448B1300A85E31 /* MatchTableViewCell */,
+				FA9887022469C1700018BDFE /* SavedMatchesTableViewCell */,
+				FA07F09324448B1300A85E31 /* MatchResultsTableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		FA07F09324448B1300A85E31 /* MatchTableViewCell */ = {
+		FA07F09324448B1300A85E31 /* MatchResultsTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				FA07F09424448B2E00A85E31 /* MatchTableViewCell.swift */,
-				FA07F09524448B2E00A85E31 /* MatchTableViewCell.xib */,
+				FA07F09424448B2E00A85E31 /* MatchResultsTableViewCell.swift */,
+				FA07F09524448B2E00A85E31 /* MatchResultsTableViewCell.xib */,
 			);
-			path = MatchTableViewCell;
+			path = MatchResultsTableViewCell;
 			sourceTree = "<group>";
 		};
 		FA09CA3F24389F8D002164A3 /* OnboardingModule */ = {
@@ -211,6 +240,7 @@
 		FA09CA452438A3FC002164A3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				FA9886F72469BB860018BDFE /* RealmDatabaseManagerService */,
 				FAD18AD62453193500CEBF37 /* NotificationManagerService */,
 				FA2163D9244C879F00F58F95 /* SettingsConfigurationService */,
 				FAB54CAB24433CDD00E582BF /* ResponseToDTOConverterService */,
@@ -322,6 +352,79 @@
 			path = CyberSpotApp;
 			sourceTree = "<group>";
 		};
+		FA6D540B246997E700234C6F /* Realm Database */ = {
+			isa = PBXGroup;
+			children = (
+				FA9886F2246998F50018BDFE /* MatchModel.swift */,
+			);
+			path = "Realm Database";
+			sourceTree = "<group>";
+		};
+		FA9886F42469AEC60018BDFE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA9886F52469AED10018BDFE /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA9886F72469BB860018BDFE /* RealmDatabaseManagerService */ = {
+			isa = PBXGroup;
+			children = (
+				FA9886F82469BBAB0018BDFE /* RealmDatabaseManagerService.swift */,
+				FA9886FA2469BBC30018BDFE /* RealmDatabaseManagerServiceImpl.swift */,
+			);
+			path = RealmDatabaseManagerService;
+			sourceTree = "<group>";
+		};
+		FA9886FC2469BE0D0018BDFE /* SavedMatchesModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA9886FF2469BE230018BDFE /* Presenter */,
+				FA9886FE2469BE1E0018BDFE /* Interactor */,
+				FA9886FD2469BE190018BDFE /* View */,
+				FA9887132469CB3B0018BDFE /* SavedMatchesAssembly.swift */,
+			);
+			path = SavedMatchesModule;
+			sourceTree = "<group>";
+		};
+		FA9886FD2469BE190018BDFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA9887002469BEF80018BDFE /* SavedMatchesViewController.swift */,
+				FA9887072469C5810018BDFE /* SavedMatchesViewInput.swift */,
+				FA9887092469C5940018BDFE /* SavedMatchesViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA9886FE2469BE1E0018BDFE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FA98870D2469CABE0018BDFE /* SavedMatchesInteractorInput.swift */,
+				FA98870F2469CAD40018BDFE /* SavedMatchesInteractorOutput.swift */,
+				FA9887112469CAEB0018BDFE /* SavedMatchesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FA9886FF2469BE230018BDFE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA98870B2469CA690018BDFE /* SavedMatchesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FA9887022469C1700018BDFE /* SavedMatchesTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA9887032469C1D90018BDFE /* SavedMatchesTableViewCell.swift */,
+				FA9887042469C1D90018BDFE /* SavedMatchesTableViewCell.xib */,
+			);
+			path = SavedMatchesTableViewCell;
+			sourceTree = "<group>";
+		};
 		FAB54CA824433C5B00E582BF /* DTO */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +453,7 @@
 		FABF8828243A2A65006043F1 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				FA6D540B246997E700234C6F /* Realm Database */,
 				FAB54CA824433C5B00E582BF /* DTO */,
 				FABF8829243A2A6F006043F1 /* Network */,
 			);
@@ -385,6 +489,7 @@
 		FAE8E2542438A53A00B881B7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				FA9886F42469AEC60018BDFE /* Extensions */,
 				FA2163EA244C9E5800F58F95 /* Manager */,
 				FA07F09224448B0B00A85E31 /* View */,
 				FAB54CB024434D7500E582BF /* Constants */,
@@ -404,6 +509,7 @@
 		FAE8E26A2438AF5C00B881B7 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				FA9886FC2469BE0D0018BDFE /* SavedMatchesModule */,
 				FA2163D1244C864900F58F95 /* SettingsModule */,
 				FAE8E2852438B64500B881B7 /* TabBarController */,
 				FAE8E26B2438AF6900B881B7 /* MatchResultsModule */,
@@ -532,7 +638,8 @@
 				FA628C3324223D3200B1DE4A /* LaunchScreen.storyboard in Resources */,
 				FA628C3024223D3200B1DE4A /* Assets.xcassets in Resources */,
 				FA628C2B24223D3100B1DE4A /* Main.storyboard in Resources */,
-				FA07F09724448B2E00A85E31 /* MatchTableViewCell.xib in Resources */,
+				FA07F09724448B2E00A85E31 /* MatchResultsTableViewCell.xib in Resources */,
+				FA9887062469C1D90018BDFE /* SavedMatchesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,27 +693,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB54CAF24433D1800E582BF /* ReponseToDTOConverterServiceImpl.swift in Sources */,
+				FA9887102469CAD40018BDFE /* SavedMatchesInteractorOutput.swift in Sources */,
 				FAE8E2602438A8A100B881B7 /* OnboardingInteractorInput.swift in Sources */,
 				FA628C2E24223D3100B1DE4A /* CyberSpotApp.xcdatamodeld in Sources */,
+				FA9887142469CB3B0018BDFE /* SavedMatchesAssembly.swift in Sources */,
 				FA2163DB244C87C200F58F95 /* SettingsConfigurationService.swift in Sources */,
 				FAE8E2782438B00500B881B7 /* MatchResultsViewOutput.swift in Sources */,
 				FAE8E2872438B66600B881B7 /* TabBarController.swift in Sources */,
 				FAE8E2672438AA9900B881B7 /* OnboardingRouterInput.swift in Sources */,
 				FA09CA492438A4AC002164A3 /* NewUserServiceImpl.swift in Sources */,
+				FA9886F92469BBAB0018BDFE /* RealmDatabaseManagerService.swift in Sources */,
 				FA2163E1244C938100F58F95 /* SettingsViewOutput.swift in Sources */,
 				FAE8E27C2438B05800B881B7 /* MatchResultsInteractor.swift in Sources */,
+				FA98870E2469CABE0018BDFE /* SavedMatchesInteractorInput.swift in Sources */,
 				FAB54CAA24433C6C00E582BF /* MatchDTO.swift in Sources */,
+				FA9887122469CAEB0018BDFE /* SavedMatchesInteractor.swift in Sources */,
 				FAE8E2842438B0D600B881B7 /* MatchResultsRouterInput.swift in Sources */,
 				FAE8E27E2438B07200B881B7 /* MatchResultsInteractorInput.swift in Sources */,
+				FA9887012469BEF80018BDFE /* SavedMatchesViewController.swift in Sources */,
+				FA9887082469C5810018BDFE /* SavedMatchesViewInput.swift in Sources */,
 				FAE8E2652438AA8B00B881B7 /* OnboardingRouter.swift in Sources */,
 				FAE8E2582438A7D200B881B7 /* OnboardingViewInput.swift in Sources */,
+				FA9886F3246998F50018BDFE /* MatchModel.swift in Sources */,
 				FAE8E2692438AD6900B881B7 /* OnboardingAssembly.swift in Sources */,
 				FAE8E2722438AFB600B881B7 /* MatchResultsAssembly.swift in Sources */,
 				FA2163E5244C93BF00F58F95 /* SettingsInteractor.swift in Sources */,
 				FA628C2224223D3100B1DE4A /* AppDelegate.swift in Sources */,
 				FA628C2424223D3100B1DE4A /* SceneDelegate.swift in Sources */,
 				FA2163D6244C868200F58F95 /* SettingsAssembly.swift in Sources */,
+				FA98870C2469CA690018BDFE /* SavedMatchesPresenter.swift in Sources */,
 				FAE8E2562438A54800B881B7 /* Constants.swift in Sources */,
+				FA9887052469C1D90018BDFE /* SavedMatchesTableViewCell.swift in Sources */,
 				FA2163E9244C93FE00F58F95 /* SettingsInteractorOutput.swift in Sources */,
 				FAD18AD5245318FF00CEBF37 /* NotificationManagerService.swift in Sources */,
 				FAE8E2822438B0C100B881B7 /* MatchResultsRouter.swift in Sources */,
@@ -615,12 +732,13 @@
 				FA2163EC244C9E7300F58F95 /* URLConstructorManager.swift in Sources */,
 				FA09CA412438A17E002164A3 /* OnboardingViewController.swift in Sources */,
 				FABF882E243A36F7006043F1 /* NetworkManagerService.swift in Sources */,
+				FA98870A2469C5940018BDFE /* SavedMatchesViewOutput.swift in Sources */,
 				FABF882B243A2AD1006043F1 /* MatchResponse.swift in Sources */,
 				FAE8E25E2438A88800B881B7 /* OnboardingInteractor.swift in Sources */,
 				FAE8E2802438B08E00B881B7 /* MatchResultsInteractorOutput.swift in Sources */,
 				FAE8E2622438A8B000B881B7 /* OnboardingInteractorOutput.swift in Sources */,
 				FA2163E7244C93E000F58F95 /* SettingsInteractorInput.swift in Sources */,
-				FA07F09624448B2E00A85E31 /* MatchTableViewCell.swift in Sources */,
+				FA07F09624448B2E00A85E31 /* MatchResultsTableViewCell.swift in Sources */,
 				FAD18AD82453194300CEBF37 /* NotificationManagerServiceImpl.swift in Sources */,
 				FAE8E27A2438B03000B881B7 /* MatchResultsPresenter.swift in Sources */,
 				FABA7E63245257BB00ED654D /* RachabilityManager.swift in Sources */,
@@ -629,7 +747,9 @@
 				FA09CA472438A438002164A3 /* NewUserService.swift in Sources */,
 				FAB54CAD24433CFE00E582BF /* ReponseToDTOConverterService.swift in Sources */,
 				FA2163DF244C935200F58F95 /* SettingsViewInput.swift in Sources */,
+				FA9886F62469AED10018BDFE /* Extensions.swift in Sources */,
 				FAE8E2762438AFF000B881B7 /* MatchResultsViewInput.swift in Sources */,
+				FA9886FB2469BBC30018BDFE /* RealmDatabaseManagerServiceImpl.swift in Sources */,
 				FABF8830243A370C006043F1 /* NetworkManagerServiceImpl.swift in Sources */,
 				FAE8E25A2438A7F500B881B7 /* OnboardingViewOutput.swift in Sources */,
 				FA2163D8244C86A900F58F95 /* SettingsViewController.swift in Sources */,

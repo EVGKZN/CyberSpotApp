@@ -25,6 +25,8 @@ class MatchResultsAssembly: NSObject {
         let networkManagerService = NetworkManagerServiceImpl()
         let reponseToDTOConverterService = ReponseToDTOConverterServiceImpl()
         let settingsConfigurationService = SettingsConfigurationServiceImpl()
+        let databaseManager = RealmDatabaseManagerServiceImpl()
+        let notificationManager = NotificationManagerServiceImpl()
         
         view.presenter = presenter
         
@@ -37,6 +39,8 @@ class MatchResultsAssembly: NSObject {
         interactor.networkManager = networkManagerService
         interactor.responseToDTOConverter = reponseToDTOConverterService
         interactor.settingsConfigurationService = settingsConfigurationService
+        interactor.databaseManager = databaseManager
+        interactor.notificationManager = notificationManager
         
         router.view = view
     }
