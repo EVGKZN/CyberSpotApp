@@ -10,6 +10,7 @@ import UIKit
 
 class SavedMatchesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var leagueLabel: UILabel!
     @IBOutlet weak var videogameImageImageView: UIImageView!
     @IBOutlet weak var videogameNameLabel: UILabel!

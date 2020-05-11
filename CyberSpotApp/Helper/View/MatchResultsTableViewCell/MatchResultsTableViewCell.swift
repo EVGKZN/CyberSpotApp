@@ -11,6 +11,7 @@ import SDWebImage
 
 class MatchResultsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var leagueLabel: UILabel!
     @IBOutlet weak var videogameImageImageView: UIImageView!
     @IBOutlet weak var videogameNameLabel: UILabel!
@@ -36,6 +37,15 @@ class MatchResultsTableViewCell: UITableViewCell {
     
     @IBAction func didPressLikeMatchButton(_ sender: Any) {
         presenterDelegate.saveMatch(match: match)
+        UIView.animate(withDuration: 0.4,
+        animations: {
+            self.likeButton.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+        },
+        completion: { _ in
+            UIView.animate(withDuration: 0.6) {
+                self.likeButton.transform = CGAffineTransform.identity
+            }
+        })
     }
     
     func configure(with match: MatchDTO, presenterDelegate: MatchResultsViewOutput) {

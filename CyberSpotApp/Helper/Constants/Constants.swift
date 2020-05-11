@@ -40,8 +40,8 @@ struct Constants {
     static let csgoName = "CS:GO"
     
     //MARK: - Videogame Image Names Constants
-    static let dota2ImageName = "dota2OnIcon"
-    static let csgoImageName = "csgoOnIcon"
+    static let dota2ImageName = "dotaIconMini"
+    static let csgoImageName = "csgoIconMini"
     
     //MARK: - Cell Configuration Constants
     static let firstOpponentNumber = 0

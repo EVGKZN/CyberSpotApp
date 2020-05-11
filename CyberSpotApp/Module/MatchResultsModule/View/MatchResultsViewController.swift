@@ -90,6 +90,10 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        matchResultsTableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         let offsetY = scrollView.contentOffset.y

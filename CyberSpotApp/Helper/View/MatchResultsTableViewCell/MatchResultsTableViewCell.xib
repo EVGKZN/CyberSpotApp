@@ -37,8 +37,8 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XyE-SN-qVH">
-                        <rect key="frame" x="49" y="13" width="345" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="49" y="13.5" width="345" height="20"/>
+                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -126,6 +126,7 @@
                 <outlet property="firstOpponentImageImageView" destination="aCW-sR-KjI" id="VaH-Al-BUf"/>
                 <outlet property="firstOpponentNameLabel" destination="YVY-St-EIv" id="uqe-ZO-Sba"/>
                 <outlet property="leagueLabel" destination="cHI-KJ-yDU" id="CiI-ai-xRd"/>
+                <outlet property="likeButton" destination="fKk-A5-PKf" id="kIM-XM-W4J"/>
                 <outlet property="scoreLabel" destination="tg4-xJ-Wm6" id="OUa-XB-gdI"/>
                 <outlet property="secondOpponentImageImageView" destination="jS3-hx-qlV" id="B4S-T1-lZh"/>
                 <outlet property="secondOpponentNameLabel" destination="7AX-1q-yoc" id="aC9-zk-mur"/>
