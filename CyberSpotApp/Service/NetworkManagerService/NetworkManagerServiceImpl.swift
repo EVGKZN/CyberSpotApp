@@ -45,12 +45,4 @@ class NetworkManagerServiceImpl: NetworkManagerService {
     func refreshMatches() {
         self.pageNumber = Constants.firstPageNumberToLoadMoreMatches
     }
-    
-    func isConnectedToNetwork() -> Bool {
-        if ReachabilityManager.isConnectedToNetwork() {
-            return true
-        } else {
-            return false
-        }
-    }
 }

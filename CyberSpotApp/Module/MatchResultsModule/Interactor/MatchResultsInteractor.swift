@@ -41,11 +41,6 @@ class MatchResultsInteractor: MatchResultsInteractorInput {
         networkManager.refreshMatches()
     }
     
-    func isConnectedToNetwork() {
-        let result = networkManager.isConnectedToNetwork()
-        presenter.didFinishCheckingInternetConnection(result: result)
-    }
-    
     func saveMatch(match: MatchDTO) {
         
         databaseManager.saveMatch(match: match) { isSaved in

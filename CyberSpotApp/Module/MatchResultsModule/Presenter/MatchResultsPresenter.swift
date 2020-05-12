@@ -43,14 +43,6 @@ class MatchResultsPresenter: MatchResultsViewOutput, MatchResultsInteractorOutpu
         interactor.loadMatches()
     }
     
-    func isConnectedToNetwork() {
-        interactor.isConnectedToNetwork()
-    }
-    
-    func didFinishCheckingInternetConnection(result: Bool) {
-        view.didFinishCheckingInternetConnection(result: result)
-    }
-    
     func saveMatch(match: MatchDTO) {
         interactor.saveMatch(match: match)
     }

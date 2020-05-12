@@ -16,10 +16,12 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     var presenter: MatchResultsViewOutput!
     var matches: [MatchDTO] = []
     var refreshControl: UIRefreshControl?
+    var reachibility: Reachability!
     
     private var isLoadingMoreMatches = true
     private var isRefreshing = false
     private var isInitiallizing = true
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +38,6 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         self.showSpinner(onView: self.view)
         
         presenter.initDefaultConfiguration()
-        presenter.isConnectedToNetwork()
         presenter.loadMatches()
     }
     
@@ -122,25 +123,9 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         matchResultsTableView.setContentOffset(.zero, animated: true)
     }
     
-    func didFinishCheckingInternetConnection(result: Bool) {
-        
-        if result {
-            noInternetConnectionView.isHidden = true
-            matchResultsTableView.isHidden = false
-        } else {
-            matchResultsTableView.isHidden = true
-            noInternetConnectionView.isHidden = false
-            if isInitiallizing {
-                
-                self.removeSpinner()
-                isInitiallizing = false
-            }
-        }
-        
-    }
-    
     func addObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(refreshTable), name: Notification.Name(rawValue: Constants.updateMatchesViewNotificationName), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reachabilityChanged(_:)), name: Notification.Name.reachabilityChanged, object: nil)
     }
     
     func showEmptyFilterErrorAlertController() {
@@ -158,5 +143,31 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         }
         alertController.addAction(alertOkAction)
         present(alertController, animated: true)
+    }
+    
+    @objc func reachabilityChanged(_ note: NSNotification) {
+        let reachability = note.object as! Reachability
+        if reachability.connection != .unavailable {
+            
+            if reachability.connection == .wifi {
+                print("Reachable via WiFi")
+            } else {
+                print("Reachable via Cellular")
+            }
+            
+            noInternetConnectionView.isHidden = true
+            matchResultsTableView.isHidden = false
+        } else {
+            
+            print("Not reachable")
+            
+            matchResultsTableView.isHidden = true
+             noInternetConnectionView.isHidden = false
+             if isInitiallizing {
+                 
+                 self.removeSpinner()
+                 isInitiallizing = false
+             }
+        }
     }
 }

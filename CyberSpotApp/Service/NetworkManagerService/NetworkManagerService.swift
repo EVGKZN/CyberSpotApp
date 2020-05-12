@@ -11,5 +11,4 @@ import Foundation
 protocol NetworkManagerService {
     func loadMatches(completion: @escaping ([Match]) -> Void)
     func refreshMatches()
-    func isConnectedToNetwork() -> Bool 
 }
