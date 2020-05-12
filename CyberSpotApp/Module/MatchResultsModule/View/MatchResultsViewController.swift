@@ -100,7 +100,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         
-        if offsetY > contentHeight - scrollView.frame.height {
+        if offsetY > contentHeight - scrollView.frame.height - CGFloat(Constants.additiveSubtrahendForPredownloadingNewMatches) {
           if !isLoadingMoreMatches {
             isLoadingMoreMatches = true
             presenter.loadMatches()

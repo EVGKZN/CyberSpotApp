@@ -48,6 +48,7 @@ struct Constants {
     static let secondOpponentNumber = 1
     static let placeholderImageName = "cyberSpotLogo"
     static let preferredHeight = 200
+    static let additiveSubtrahendForPredownloadingNewMatches = 500
     
     //MARK: - Custom Cell's Reuse Identifiers Constants
     static let customMatchCellReuseIdentifier = "customMatchCell"
