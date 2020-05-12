@@ -156,6 +156,10 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
                 print("Reachable via Cellular")
             }
             
+            if !isInitiallizing{
+                self.isInitiallizing = true
+                self.showSpinner(onView: self.view)
+            }
             refreshTable()
             noInternetConnectionView.isHidden = true
             matchResultsTableView.isHidden = false
