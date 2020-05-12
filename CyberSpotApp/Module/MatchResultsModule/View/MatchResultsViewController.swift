@@ -9,7 +9,7 @@
 import UIKit
 
 class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var noInternetConnectionView: UIView!
     @IBOutlet weak var matchResultsTableView: UITableView!
     
@@ -22,7 +22,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     private var isRefreshing = false
     private var isInitiallizing = true
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +31,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         matchResultsTableView.register(UINib(nibName: Constants.customMatchResultsCellNibName, bundle: nil), forCellReuseIdentifier: Constants.customMatchCellReuseIdentifier)
         matchResultsTableView.estimatedRowHeight = CGFloat(Constants.preferredHeight)
         matchResultsTableView.isHidden = true
+        matchResultsTableView.tableFooterView = UIView()
         
         addRefreshControl()
         addObservers()
@@ -102,10 +103,10 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         let contentHeight = scrollView.contentSize.height
         
         if offsetY > contentHeight - scrollView.frame.height - CGFloat(Constants.additiveSubtrahendForPredownloadingNewMatches) {
-          if !isLoadingMoreMatches {
-            isLoadingMoreMatches = true
-            presenter.loadMatches()
-          }
+            if !isLoadingMoreMatches {
+                isLoadingMoreMatches = true
+                presenter.loadMatches()
+            }
         }
     }
     
@@ -155,6 +156,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
                 print("Reachable via Cellular")
             }
             
+            refreshTable()
             noInternetConnectionView.isHidden = true
             matchResultsTableView.isHidden = false
         } else {
@@ -162,12 +164,12 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
             print("Not reachable")
             
             matchResultsTableView.isHidden = true
-             noInternetConnectionView.isHidden = false
-             if isInitiallizing {
-                 
-                 self.removeSpinner()
-                 isInitiallizing = false
-             }
+            noInternetConnectionView.isHidden = false
+            if isInitiallizing {
+                
+                self.removeSpinner()
+                isInitiallizing = false
+            }
         }
     }
 }
