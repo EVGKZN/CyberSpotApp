@@ -15,4 +15,5 @@ protocol MatchResultsViewOutput: AnyObject {
     func initDefaultConfiguration()
     func refreshMatches()
     func saveMatch(match: MatchDTO)
+    func didPressCell(with match: MatchDTO)
 }

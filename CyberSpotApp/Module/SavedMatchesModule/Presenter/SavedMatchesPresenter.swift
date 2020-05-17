@@ -12,6 +12,7 @@ class SavedMatchesPresenter: SavedMatchesViewOutput, SavedMatchesInteractorOutpu
     
     weak var view: SavedMatchesViewInput!
     var interactor: SavedMatchesInteractorInput!
+    var router: SavedMatchesRouterInput!
     
     func loadMatches() {
         interactor.loadMatches()
@@ -28,4 +29,9 @@ class SavedMatchesPresenter: SavedMatchesViewOutput, SavedMatchesInteractorOutpu
     func didFinishDeletingMatch() {
         view.didFinishDeletingMatch()
     }
+    
+      func didPressCell(with match: MatchDTO) {
+        router.presentDetailView(for: match)
+      }
+    
 }

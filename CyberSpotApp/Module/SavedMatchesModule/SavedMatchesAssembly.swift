@@ -20,14 +20,18 @@ class SavedMatchesAssembly: NSObject {
         
         let presenter = SavedMatchesPresenter()
         let interactor = SavedMatchesInteractor()
+        let router = SavedMatchesRouter()
         let databaseManager = RealmDatabaseManagerServiceImpl()
         
         view.presenter = presenter
         
         presenter.view = view
         presenter.interactor = interactor
+        presenter.router = router
         
         interactor.presenter = presenter
         interactor.databaseManager = databaseManager
+        
+        router.view = view
     }
 }

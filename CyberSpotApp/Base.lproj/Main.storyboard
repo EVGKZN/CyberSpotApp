@@ -34,7 +34,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wcB-SX-fq9">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -51,7 +51,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" title="Сохраненные матчи" id="dva-nR-pqC"/>
                     <connections>
                         <outlet property="noItemsView" destination="sm8-Ac-Tvc" id="sme-hg-WR9"/>
                         <outlet property="savedMatchesTableView" destination="wcB-SX-fq9" id="QiG-3K-Eh1"/>
@@ -64,7 +64,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="485.50724637681162" y="-1096.2053571428571"/>
+            <point key="canvasLocation" x="1395.6521739130435" y="-1096.2053571428571"/>
         </scene>
         <!--OnboardingViewController-->
         <scene sceneID="S2t-Oz-i5v">
@@ -114,7 +114,280 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="1457" y="-354"/>
+            <point key="canvasLocation" x="2366.666666666667" y="-354.24107142857139"/>
+        </scene>
+        <!--Match Detail View Controller-->
+        <scene sceneID="MC9-vy-esq">
+            <objects>
+                <viewController storyboardIdentifier="MatchDetailViewController" id="SkJ-yx-NTY" customClass="MatchDetailViewController" customModule="CyberSpotApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rUq-n7-j7G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHj-Mk-SaI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOn-tB-bwL">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yCE-V4-u21">
+                                                <rect key="frame" x="179" y="20" width="56.333333333333343" height="25"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MFm-51-TCE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="T4X-gw-IMo"/>
+                                                            <constraint firstAttribute="width" constant="25" id="wNB-dj-YGi"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZh-Ax-e42">
+                                                        <rect key="frame" x="30" y="1" width="26.333333333333329" height="23.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="customLine" translatesAutoresizingMaskIntoConstraints="NO" id="0ku-qh-BYl">
+                                                <rect key="frame" x="174.66666666666666" y="125" width="65" height="1"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Riq-0l-Fei">
+                                                <rect key="frame" x="190.66666666666666" y="95" width="32.666666666666657" height="40"/>
+                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="40"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="I4Z-pm-VZO">
+                                                <rect key="frame" x="20" y="201.66666666666663" width="374" height="195.33333333333337"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ЛИГА" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fe1-yH-axR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="23.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DN2-ma-ag6">
+                                                        <rect key="frame" x="0.0" y="38.333333333333371" width="374" height="25"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="НАЗВАНИЕ:" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxe-ci-Y98">
+                                                                <rect key="frame" x="0.0" y="0.0" width="184.66666666666666" height="25"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEAGUE NAME" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFG-wE-NtY">
+                                                                <rect key="frame" x="189.66666666666663" y="0.0" width="184.33333333333337" height="25"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="25"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aKX-Gy-SqC">
+                                                        <rect key="frame" x="0.0" y="78.333333333333371" width="374" height="25"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="СТАДИЯ:" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crI-6C-gUe">
+                                                                <rect key="frame" x="0.0" y="0.0" width="184.66666666666666" height="25"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAGE NAME" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGh-DU-Hap">
+                                                                <rect key="frame" x="189.66666666666663" y="0.0" width="184.33333333333337" height="25"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="25"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uDZ-sL-IyS">
+                                                        <rect key="frame" x="0.0" y="118.33333333333337" width="374" height="25"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="ПРИЗОВОЙ ФОНД:" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0i-Pv-kgk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="184.66666666666666" height="25"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIZEPOOL" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLh-GE-whN">
+                                                                <rect key="frame" x="189.66666666666663" y="0.0" width="184.33333333333337" height="25"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="25"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Hi7-I7-gkh">
+                                                        <rect key="frame" x="0.0" y="158.33333333333337" width="374" height="37"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="ССЫЛКА:" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kTo-J2-zJF">
+                                                                <rect key="frame" x="0.0" y="0.0" width="184.66666666666666" height="37"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SGe-Xn-H76">
+                                                                <rect key="frame" x="189.66666666666663" y="0.0" width="184.33333333333337" height="37"/>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="Перейти на сайт">
+                                                                            <attributes>
+                                                                                <font key="NSFont" size="25" name="DINCondensed-Bold"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="didPressGoToLeagueWebsite:" destination="SkJ-yx-NTY" eventType="touchUpInside" id="8eA-UI-lyg"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqb-v9-AzL">
+                                                <rect key="frame" x="188.33333333333334" y="129" width="37.666666666666657" height="12"/>
+                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="91p-v5-FAF">
+                                                <rect key="frame" x="20" y="63.666666666666671" width="100" height="123.00000000000001"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yUN-l7-5qo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="0Ia-ND-m9W"/>
+                                                            <constraint firstAttribute="width" constant="100" id="LlI-eR-5le"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEAM #1 NAME" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Uy-Q9-7CD">
+                                                        <rect key="frame" x="0.0" y="105" width="100" height="18"/>
+                                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JJb-Nf-36a">
+                                                <rect key="frame" x="20" y="417" width="374" height="168.33333333333337"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ИГРЫ МАТЧА" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7La-rE-oOH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="23.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pcj-Oi-dSg">
+                                                        <rect key="frame" x="0.0" y="23.333333333333371" width="374" height="145"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="145" id="m5a-aA-xGO"/>
+                                                        </constraints>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="d4h-bz-CWu">
+                                                            <size key="itemSize" width="128" height="128"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells/>
+                                                    </collectionView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WMK-FX-dsA">
+                                                <rect key="frame" x="294" y="63.666666666666671" width="100" height="123.00000000000001"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I0E-3s-K2u">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="Os6-TK-YDA"/>
+                                                            <constraint firstAttribute="height" constant="100" id="oUn-jK-OP0"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEAM #2 NAME" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2z-Jw-lAD">
+                                                        <rect key="frame" x="0.0" y="105" width="100" height="18"/>
+                                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="JJb-Nf-36a" secondAttribute="trailing" constant="20" id="4tC-bK-ENg"/>
+                                            <constraint firstItem="Riq-0l-Fei" firstAttribute="top" secondItem="yCE-V4-u21" secondAttribute="bottom" constant="50" id="65q-MC-zbe"/>
+                                            <constraint firstItem="I4Z-pm-VZO" firstAttribute="top" secondItem="9Uy-Q9-7CD" secondAttribute="bottom" constant="15" id="76q-Aj-JVb"/>
+                                            <constraint firstItem="I4Z-pm-VZO" firstAttribute="leading" secondItem="hOn-tB-bwL" secondAttribute="leading" constant="20" id="8i7-Ss-drT"/>
+                                            <constraint firstItem="I4Z-pm-VZO" firstAttribute="centerX" secondItem="hOn-tB-bwL" secondAttribute="centerX" id="FNu-ZI-8By"/>
+                                            <constraint firstItem="0ku-qh-BYl" firstAttribute="centerX" secondItem="Riq-0l-Fei" secondAttribute="centerX" id="Gcb-bL-IkL"/>
+                                            <constraint firstItem="JJb-Nf-36a" firstAttribute="top" secondItem="I4Z-pm-VZO" secondAttribute="bottom" constant="20" id="JJv-qZ-oC9"/>
+                                            <constraint firstItem="Riq-0l-Fei" firstAttribute="centerX" secondItem="hOn-tB-bwL" secondAttribute="centerX" id="O6b-bn-eCX"/>
+                                            <constraint firstItem="JJb-Nf-36a" firstAttribute="centerX" secondItem="hOn-tB-bwL" secondAttribute="centerX" id="OlB-VV-f4I"/>
+                                            <constraint firstItem="bqb-v9-AzL" firstAttribute="top" secondItem="0ku-qh-BYl" secondAttribute="bottom" constant="3" id="Rh5-Bb-PQS"/>
+                                            <constraint firstItem="yCE-V4-u21" firstAttribute="centerX" secondItem="hOn-tB-bwL" secondAttribute="centerX" id="RyC-MU-h2N"/>
+                                            <constraint firstItem="yCE-V4-u21" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hOn-tB-bwL" secondAttribute="leading" constant="20" id="WCG-ho-rui"/>
+                                            <constraint firstAttribute="trailing" secondItem="I4Z-pm-VZO" secondAttribute="trailing" constant="20" id="X0a-NC-Od3"/>
+                                            <constraint firstItem="bqb-v9-AzL" firstAttribute="centerX" secondItem="0ku-qh-BYl" secondAttribute="centerX" id="XX2-gu-1sz"/>
+                                            <constraint firstItem="JJb-Nf-36a" firstAttribute="leading" secondItem="hOn-tB-bwL" secondAttribute="leading" constant="20" id="YRD-Il-2nj"/>
+                                            <constraint firstItem="91p-v5-FAF" firstAttribute="leading" secondItem="hOn-tB-bwL" secondAttribute="leading" constant="20" id="Zmj-2i-u6v"/>
+                                            <constraint firstItem="91p-v5-FAF" firstAttribute="centerY" secondItem="Riq-0l-Fei" secondAttribute="centerY" constant="10" id="bcR-kr-G0Y"/>
+                                            <constraint firstAttribute="trailing" secondItem="WMK-FX-dsA" secondAttribute="trailing" constant="20" id="eHs-GX-U8b"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yCE-V4-u21" secondAttribute="trailing" constant="20" id="hy5-WO-bT7"/>
+                                            <constraint firstItem="yCE-V4-u21" firstAttribute="top" secondItem="hOn-tB-bwL" secondAttribute="top" constant="20" id="snl-zo-WIV"/>
+                                            <constraint firstItem="0ku-qh-BYl" firstAttribute="top" secondItem="Riq-0l-Fei" secondAttribute="bottom" constant="-10" id="wA9-RM-oUE"/>
+                                            <constraint firstItem="WMK-FX-dsA" firstAttribute="centerY" secondItem="Riq-0l-Fei" secondAttribute="centerY" constant="10" id="yfH-q6-EKc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hOn-tB-bwL" firstAttribute="leading" secondItem="dHj-Mk-SaI" secondAttribute="leading" id="0I6-re-UOc"/>
+                                    <constraint firstItem="hOn-tB-bwL" firstAttribute="centerX" secondItem="dHj-Mk-SaI" secondAttribute="centerX" id="JNx-Iz-WOr"/>
+                                    <constraint firstItem="hOn-tB-bwL" firstAttribute="centerY" secondItem="dHj-Mk-SaI" secondAttribute="centerY" id="U1u-GD-Jgq"/>
+                                    <constraint firstAttribute="bottom" secondItem="hOn-tB-bwL" secondAttribute="bottom" id="YFL-fW-I3x"/>
+                                    <constraint firstItem="hOn-tB-bwL" firstAttribute="top" secondItem="qbG-y4-Q5d" secondAttribute="top" id="jnh-P3-8kz"/>
+                                    <constraint firstAttribute="trailing" secondItem="hOn-tB-bwL" secondAttribute="trailing" id="vS0-aP-lFh"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="eAZ-Up-g4j"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="qbG-y4-Q5d"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dHj-Mk-SaI" firstAttribute="top" secondItem="HhV-H9-cOa" secondAttribute="top" id="0P3-AX-RL6"/>
+                            <constraint firstItem="HhV-H9-cOa" firstAttribute="trailing" secondItem="dHj-Mk-SaI" secondAttribute="trailing" id="GCg-TG-pKJ"/>
+                            <constraint firstItem="dHj-Mk-SaI" firstAttribute="leading" secondItem="HhV-H9-cOa" secondAttribute="leading" id="QrP-pQ-5py"/>
+                            <constraint firstItem="HhV-H9-cOa" firstAttribute="bottom" secondItem="dHj-Mk-SaI" secondAttribute="bottom" id="dsI-RU-HU4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HhV-H9-cOa"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="bqb-v9-AzL" id="SKF-3T-vjz"/>
+                        <outlet property="firstTeamImageView" destination="yUN-l7-5qo" id="npL-PP-kGF"/>
+                        <outlet property="firstTeamNameLabel" destination="9Uy-Q9-7CD" id="aec-v2-9tz"/>
+                        <outlet property="gamesCollectionView" destination="Pcj-Oi-dSg" id="Utc-dD-B3c"/>
+                        <outlet property="leagueLinkStackView" destination="Hi7-I7-gkh" id="hHB-KY-ciG"/>
+                        <outlet property="leagueNameLabel" destination="cFG-wE-NtY" id="GfB-OI-qYL"/>
+                        <outlet property="leagueURLButton" destination="SGe-Xn-H76" id="C4r-RO-pzx"/>
+                        <outlet property="prizepoolLabel" destination="cLh-GE-whN" id="ijO-MF-AaA"/>
+                        <outlet property="scoreLabel" destination="Riq-0l-Fei" id="HWm-QM-mZg"/>
+                        <outlet property="secondTeamImageView" destination="I0E-3s-K2u" id="SOc-sk-9r6"/>
+                        <outlet property="secondTeamNameLabel" destination="q2z-Jw-lAD" id="YrW-yU-RfZ"/>
+                        <outlet property="stageNameLabel" destination="BGh-DU-Hap" id="oiO-hV-uI9"/>
+                        <outlet property="videogameImageView" destination="MFm-51-TCE" id="mfm-cI-qUa"/>
+                        <outlet property="videogameNameLabel" destination="oZh-Ax-e42" id="qMk-pr-xMq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vH4-yj-oVD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="WmP-hl-rBZ" customClass="MatchDetailAssembly" customModule="CyberSpotApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="SkJ-yx-NTY" id="dsx-LJ-KW2"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="3349.275362318841" y="-354.24107142857139"/>
         </scene>
         <!--AllMatchesViewController-->
         <scene sceneID="wg7-f3-ORb">
@@ -143,7 +416,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DsN-sG-n2O">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -156,7 +429,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="globe" catalog="system" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" title="Прошедшие матчи" id="rQW-rC-MR3"/>
                     <connections>
                         <outlet property="matchResultsTableView" destination="DsN-sG-n2O" id="ZjI-pl-l2Y"/>
                         <outlet property="noInternetConnectionView" destination="i29-tl-thd" id="qmq-Kz-SUN"/>
@@ -169,7 +442,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="485.50724637681162" y="-354.24107142857139"/>
+            <point key="canvasLocation" x="1395.6521739130435" y="-354.24107142857139"/>
         </scene>
         <!--TabBarController-->
         <scene sceneID="yl2-sM-qoP">
@@ -192,8 +465,8 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="vpW-Bk-NM3" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="9co-Qg-Noj" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="pIP-2R-zC8" kind="relationship" relationship="viewControllers" id="wOl-Gr-t5w"/>
                     </connections>
                 </tabBarController>
@@ -269,10 +542,49 @@
             </objects>
             <point key="canvasLocation" x="485.50724637681162" y="380.35714285714283"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DTZ-br-6bG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9co-Qg-Noj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="globe" catalog="system" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Jh-Kv-uDO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="cbj-AZ-acH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mzc-iX-gY2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="485.50724637681162" y="-354.24107142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I84-6N-82S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vpW-Bk-NM3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nBh-Dt-DvP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="Cnw-NR-twm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uP4-wz-vzk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="485.50724637681162" y="-1096.2053571428571"/>
+        </scene>
     </scenes>
     <resources>
         <image name="closeButtonIcon" width="512" height="512"/>
-        <image name="csgoOnIcon" width="128" height="128"/>
+        <image name="csgoOnIcon" width="1993" height="1993"/>
+        <image name="customLine" width="65" height="1"/>
         <image name="cyberSpotLogo" width="241" height="241"/>
         <image name="dota2OnIcon" width="1993" height="1993"/>
         <image name="emptyFolderIcon" width="512" height="512"/>

@@ -26,6 +26,8 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.showSpinner(onView: self.view)
+        self.noInternetConnectionView.isHidden = true
         matchResultsTableView.delegate = self
         matchResultsTableView.dataSource = self
         matchResultsTableView.register(UINib(nibName: Constants.customMatchResultsCellNibName, bundle: nil), forCellReuseIdentifier: Constants.customMatchCellReuseIdentifier)
@@ -36,10 +38,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         addRefreshControl()
         addObservers()
         
-        self.showSpinner(onView: self.view)
-        
         presenter.initDefaultConfiguration()
-        presenter.loadMatches()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -94,18 +93,22 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         matchResultsTableView.deselectRow(at: indexPath, animated: true)
+        presenter.didPressCell(with: matches[indexPath.row])
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        
-        if offsetY > contentHeight - scrollView.frame.height - CGFloat(Constants.additiveSubtrahendForPredownloadingNewMatches) {
-            if !isLoadingMoreMatches {
-                isLoadingMoreMatches = true
-                presenter.loadMatches()
+        if ((!isInitiallizing)&&(!isRefreshing)) {
+            let offsetY = scrollView.contentOffset.y
+            let contentHeight = scrollView.contentSize.height
+            
+            if offsetY > contentHeight - scrollView.frame.height - CGFloat(Constants.additiveSubtrahendForPredownloadingNewMatches) {
+                if !isLoadingMoreMatches {
+                    isLoadingMoreMatches = true
+                    presenter.loadMatches()
+                }
             }
         }
     }

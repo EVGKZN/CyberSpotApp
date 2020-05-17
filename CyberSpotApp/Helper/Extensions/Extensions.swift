@@ -123,3 +123,24 @@ extension UIColor {
         self.init(red: newRed, green: newGreen, blue: newBlue, alpha: 1.0)
     }
 }
+
+extension NSAttributedString {
+    static func makeHyperlink(for path: String, in string: String, as substring: String) -> NSAttributedString {
+        
+        let nsString = NSString(string: string)
+        let substringRange = nsString.range(of: substring)
+        let attributedString = NSMutableAttributedString(string: string)
+        attributedString.addAttribute(.link, value: path, range: substringRange)
+        return attributedString
+    }
+}
+
+extension Double {
+  func asString(style: DateComponentsFormatter.UnitsStyle) -> String {
+    let formatter = DateComponentsFormatter()
+    formatter.allowedUnits = [.hour, .minute, .second, .nanosecond]
+    formatter.unitsStyle = style
+    guard let formattedString = formatter.string(from: self) else { return "" }
+    return formattedString
+  }
+}

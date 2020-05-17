@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetailViewGameCollectionViewCell" id="gTV-IL-0wX" customClass="GamesCollectionViewCell" customModule="CyberSpotApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="173" height="167"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="173" height="167"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QoG-cY-gD7">
+                        <rect key="frame" x="0.0" y="0.0" width="173" height="167"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hWj-Js-4VC">
+                                <rect key="frame" x="51.5" y="5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="cT5-yo-8K0"/>
+                                    <constraint firstAttribute="width" constant="70" id="fF1-rM-WjM"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="DG8-dd-Zwm">
+                                <rect key="frame" x="5" y="80" width="163" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Игра #" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ7-C4-fs7">
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="15"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Победитель: " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbi-hz-BfT">
+                                        <rect key="frame" x="0.0" y="17" width="163" height="15"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Длительность:" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0G-yI-PDo">
+                                        <rect key="frame" x="0.0" y="34" width="163" height="15"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hWj-Js-4VC" firstAttribute="top" secondItem="QoG-cY-gD7" secondAttribute="top" constant="5" id="04m-z8-nps"/>
+                            <constraint firstItem="hWj-Js-4VC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QoG-cY-gD7" secondAttribute="leading" constant="5" id="12g-8X-mQH"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hWj-Js-4VC" secondAttribute="trailing" constant="5" id="23x-X7-Jh3"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DG8-dd-Zwm" secondAttribute="bottom" constant="5" id="DAd-3k-rCa"/>
+                            <constraint firstAttribute="trailing" secondItem="DG8-dd-Zwm" secondAttribute="trailing" constant="5" id="Nov-pS-svQ"/>
+                            <constraint firstItem="DG8-dd-Zwm" firstAttribute="leading" secondItem="QoG-cY-gD7" secondAttribute="leading" constant="5" id="jyZ-Ie-hBz"/>
+                            <constraint firstItem="DG8-dd-Zwm" firstAttribute="top" secondItem="hWj-Js-4VC" secondAttribute="bottom" constant="5" id="lFA-wO-VWV"/>
+                            <constraint firstItem="hWj-Js-4VC" firstAttribute="centerX" secondItem="QoG-cY-gD7" secondAttribute="centerX" id="t2T-gw-wje"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="QoG-cY-gD7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="V6M-8D-f34"/>
+                <constraint firstItem="QoG-cY-gD7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="imi-cE-4a0"/>
+                <constraint firstAttribute="bottom" secondItem="QoG-cY-gD7" secondAttribute="bottom" id="isC-F7-K7l"/>
+                <constraint firstAttribute="trailing" secondItem="QoG-cY-gD7" secondAttribute="trailing" id="yng-ib-hbV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="262" height="259"/>
+            <connections>
+                <outlet property="gameDurationLabel" destination="X0G-yI-PDo" id="Rur-Tq-vJF"/>
+                <outlet property="gameNumberLabel" destination="SJ7-C4-fs7" id="L5X-8C-gnW"/>
+                <outlet property="winnerTeamImageView" destination="hWj-Js-4VC" id="zrH-lg-iyH"/>
+                <outlet property="winnerTeamNameLabel" destination="Kbi-hz-BfT" id="rmp-Fh-F0J"/>
+            </connections>
+            <point key="canvasLocation" x="36.956521739130437" y="157.03125"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -34,6 +34,7 @@ struct Constants {
     
     //MARK: - ViewControllers Names Constants
     static let onboardingViewControllerName = "OnboardingViewController"
+    static let detailViewControllerName = "MatchDetailViewController"
     
     //MARK: - Videogame Names Constants
     static let dota2Name = "Dota 2"
@@ -78,5 +79,12 @@ struct Constants {
     static let emptyFilterAlertControllerTitle = "ERROR"
     static let emptyFilterAlertControllerMessage = "You need to choose at least one filter to present matches. Change your settings and try again!"
     static let emptyFilterOkActionTitle = "Got it!"
+    
+    static let customDetailViewGameCollectionViewCellReuseIdentifier = "DetailViewGameCollectionViewCell"
+    static let customDetailViewGameCollectionViewCellNibName = "GamesCollectionViewCell"
+    
+    static let gameNumberTextForLabel = "Игра #"
+    static let gameWinnerTextForLabel = "Победитель: "
+    static let gameDurationTextForLabel = "Длительность: "
 }
 

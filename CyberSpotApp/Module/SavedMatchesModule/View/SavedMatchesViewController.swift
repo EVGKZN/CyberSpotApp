@@ -46,8 +46,10 @@ class SavedMatchesViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         savedMatchesTableView.deselectRow(at: indexPath, animated: true)
-     }
+        
+        savedMatchesTableView.deselectRow(at: indexPath, animated: true)
+        presenter.didPressCell(with: matches[indexPath.row])
+    }
     
     func didFinishLoadingMatches(matches: [MatchDTO]) {
         

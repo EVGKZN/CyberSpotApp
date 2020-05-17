@@ -12,4 +12,5 @@ protocol SavedMatchesViewOutput: AnyObject {
     
     func loadMatches()
     func deleteMatch(match: MatchDTO)
+    func didPressCell(with match: MatchDTO)
 }
