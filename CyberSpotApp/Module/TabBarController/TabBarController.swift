@@ -13,6 +13,6 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.selectedIndex = Constants.tabBarControllerMainBarNumber
+        self.selectedIndex = Constants.matchResultsTabBarIndex
     }
 }

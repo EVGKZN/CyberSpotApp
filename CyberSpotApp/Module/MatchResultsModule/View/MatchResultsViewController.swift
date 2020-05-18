@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITableViewDelegate, UITableViewDataSource {
+class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITableViewDelegate, UITableViewDataSource, UITabBarControllerDelegate {
     
     @IBOutlet weak var noInternetConnectionView: UIView!
     @IBOutlet weak var matchResultsTableView: UITableView!
@@ -25,6 +25,8 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBarController?.delegate = self
         
         self.showSpinner(onView: self.view)
         self.noInternetConnectionView.isHidden = true
@@ -177,6 +179,13 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
                 self.removeSpinner()
                 isInitiallizing = false
             }
+        }
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        
+        if (tabBarController.selectedIndex == Constants.matchResultsTabBarIndex) {
+            self.matchResultsTableView.setContentOffset(CGPoint.zero, animated: true)
         }
     }
 }

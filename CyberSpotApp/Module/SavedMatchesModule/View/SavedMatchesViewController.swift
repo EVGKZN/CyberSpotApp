@@ -18,7 +18,7 @@ class SavedMatchesViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         savedMatchesTableView.delegate = self
         savedMatchesTableView.dataSource = self
         savedMatchesTableView.register(UINib(nibName: Constants.customSavedMatchesCellNibName, bundle: nil), forCellReuseIdentifier: Constants.customMatchCellReuseIdentifier)

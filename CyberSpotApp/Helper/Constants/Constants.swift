@@ -11,7 +11,8 @@ import Foundation
 struct Constants {
     
     //MARK: - Tab Bat Controller Constants
-    static let tabBarControllerMainBarNumber = 1
+    static let matchResultsTabBarIndex = 1
+    static let savedMatchesTabBarIndex = 0
     
     //MARK: - Date Constants
     static let localeIdentifier = "ru_RU"
