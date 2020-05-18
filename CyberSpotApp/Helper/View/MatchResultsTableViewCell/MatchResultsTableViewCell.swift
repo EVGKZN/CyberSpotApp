@@ -36,15 +36,24 @@ class MatchResultsTableViewCell: UITableViewCell {
     }
     
     @IBAction func didPressLikeMatchButton(_ sender: Any) {
+        
         presenterDelegate.saveMatch(match: match)
+        let defaultTintColor = likeButton.tintColor
+        self.likeButton.tintColor = UIColor.red
+        self.likeButton.setImage(UIImage(systemName: Constants.filledHeartForMatchesResultLikeButtonSystemImageName), for: .normal)
         UIView.animate(withDuration: 0.4,
-        animations: {
-            self.likeButton.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+                       animations: {
+                        self.likeButton.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
         },
-        completion: { _ in
-            UIView.animate(withDuration: 0.6) {
-                self.likeButton.transform = CGAffineTransform.identity
-            }
+                       completion: { _ in
+                        UIView.animate(withDuration: 0.6,
+                        animations:  {
+                                        self.likeButton.transform = CGAffineTransform.identity
+                        }, completion: { _ in
+                            
+                            self.likeButton.tintColor = defaultTintColor
+                            self.likeButton.setImage(UIImage(systemName: Constants.heartForMatchesResultLikeButtonSystemImageName), for: .normal)
+                        })
         })
     }
     

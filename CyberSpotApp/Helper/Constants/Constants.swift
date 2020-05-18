@@ -10,7 +10,7 @@ import Foundation
 
 struct Constants {
     
-    //MARK: - Tab Bat Controller Constants
+    //MARK: - Tab Bar Controller Constants
     static let matchResultsTabBarIndex = 1
     static let savedMatchesTabBarIndex = 0
     
@@ -54,10 +54,12 @@ struct Constants {
     
     //MARK: - Custom Cell's Reuse Identifiers Constants
     static let customMatchCellReuseIdentifier = "customMatchCell"
+    static let customDetailViewGameCollectionViewCellReuseIdentifier = "DetailViewGameCollectionViewCell"
     
     //MARK: - Custom Cell's Nib Names Constants
     static let customMatchResultsCellNibName = "MatchResultsTableViewCell"
     static let customSavedMatchesCellNibName = "SavedMatchesTableViewCell"
+    static let customDetailViewGameCollectionViewCellNibName = "GamesCollectionViewCell"
     
     //MARK: - Settings View Button's Images
     static let csgoOnIconImage = "csgoOnIcon"
@@ -81,11 +83,13 @@ struct Constants {
     static let emptyFilterAlertControllerMessage = "You need to choose at least one filter to present matches. Change your settings and try again!"
     static let emptyFilterOkActionTitle = "Got it!"
     
-    static let customDetailViewGameCollectionViewCellReuseIdentifier = "DetailViewGameCollectionViewCell"
-    static let customDetailViewGameCollectionViewCellNibName = "GamesCollectionViewCell"
-    
+    //MARK: - Detail View Label's Constants
     static let gameNumberTextForLabel = "Игра #"
     static let gameWinnerTextForLabel = "Победитель: "
     static let gameDurationTextForLabel = "Длительность: "
+    
+    //MARK: - System Images Names
+    static let heartForMatchesResultLikeButtonSystemImageName = "heart"
+    static let filledHeartForMatchesResultLikeButtonSystemImageName = "heart.fill"
 }
 

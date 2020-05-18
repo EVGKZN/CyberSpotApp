@@ -21,6 +21,7 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     private var isLoadingMoreMatches = true
     private var isRefreshing = false
     private var isInitiallizing = true
+    private var isNeedToScrollToTop = true
     
     
     override func viewDidLoad() {
@@ -184,8 +185,12 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         
-        if (tabBarController.selectedIndex == Constants.matchResultsTabBarIndex) {
+        if ((tabBarController.selectedIndex == Constants.matchResultsTabBarIndex)&&(self.isNeedToScrollToTop)) {
             self.matchResultsTableView.setContentOffset(CGPoint.zero, animated: true)
+        } else if tabBarController.selectedIndex == Constants.matchResultsTabBarIndex {
+            self.isNeedToScrollToTop = true
+        } else {
+            self.isNeedToScrollToTop = false
         }
     }
 }
