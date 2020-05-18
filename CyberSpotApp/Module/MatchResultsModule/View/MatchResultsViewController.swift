@@ -156,12 +156,6 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
         let reachability = note.object as! Reachability
         if reachability.connection != .unavailable {
             
-            if reachability.connection == .wifi {
-                print("Reachable via WiFi")
-            } else {
-                print("Reachable via Cellular")
-            }
-            
             if !isInitiallizing{
                 self.isInitiallizing = true
                 self.showSpinner(onView: self.view)
@@ -170,8 +164,6 @@ class MatchResultsViewController: UIViewController, MatchResultsViewInput, UITab
             noInternetConnectionView.isHidden = true
             matchResultsTableView.isHidden = false
         } else {
-            
-            print("Not reachable")
             
             matchResultsTableView.isHidden = true
             noInternetConnectionView.isHidden = false
