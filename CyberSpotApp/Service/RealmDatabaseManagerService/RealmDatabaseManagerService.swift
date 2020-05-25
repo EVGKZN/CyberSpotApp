@@ -12,5 +12,5 @@ protocol RealmDatabaseManagerService {
     
     func saveMatch(match: MatchDTO, completion: @escaping (Bool) -> Void)
     func getMatches() -> [MatchDTO]
-    func deleteMatch(match: MatchDTO)
+    func deleteMatch(match: MatchDTO, completion: @escaping () -> Void)
 }

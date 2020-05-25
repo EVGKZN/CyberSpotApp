@@ -54,15 +54,15 @@ class SavedMatchesViewController: UIViewController, UITableViewDelegate, UITable
     func didFinishLoadingMatches(matches: [MatchDTO]) {
         
         self.matches = matches
-        if matches.isEmpty {
-            
-            self.savedMatchesTableView.isHidden = true
-            self.noItemsView.isHidden = false
-        } else {
-            
-            self.savedMatchesTableView.isHidden = false
-            self.noItemsView.isHidden = true
-            DispatchQueue.main.async {
+        DispatchQueue.main.async {
+            if matches.isEmpty {
+                
+                self.savedMatchesTableView.isHidden = true
+                self.noItemsView.isHidden = false
+            } else {
+                
+                self.savedMatchesTableView.isHidden = false
+                self.noItemsView.isHidden = true
                 self.savedMatchesTableView.reloadData()
             }
         }

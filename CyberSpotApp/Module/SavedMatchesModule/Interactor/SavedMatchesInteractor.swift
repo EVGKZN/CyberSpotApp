@@ -21,7 +21,8 @@ class SavedMatchesInteractor: SavedMatchesInteractorInput {
     
     func deleteMatch(match: MatchDTO) {
         
-        databaseManager.deleteMatch(match: match)
-        presenter.didFinishDeletingMatch()
+        databaseManager.deleteMatch(match: match) {
+            self.presenter.didFinishDeletingMatch()
+        }
     }
 }

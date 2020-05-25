@@ -11,18 +11,17 @@ import RealmSwift
 
 class RealmDatabaseManagerServiceImpl: RealmDatabaseManagerService {
     
-    fileprivate lazy var realm = try! Realm(configuration: .defaultConfiguration)
-    
     func saveMatch(match: MatchDTO, completion: @escaping (Bool) -> Void) {
         
         var isSaved = false
-        DispatchQueue.main.async {
+        DispatchQueue.global(qos: .utility).async {
             
-            if self.realm.object(ofType: MatchModel.self, forPrimaryKey: match.id) == nil {
+            let realm = try! Realm(configuration: .defaultConfiguration)
+            if realm.object(ofType: MatchModel.self, forPrimaryKey: match.id) == nil {
                 
                 let matchModel = match.toModel()
-                try! self.realm.write {
-                    self.realm.add(matchModel)
+                try! realm.write {
+                    realm.add(matchModel)
                 }
                 isSaved = true
                 completion(isSaved)
@@ -32,6 +31,7 @@ class RealmDatabaseManagerServiceImpl: RealmDatabaseManagerService {
     
     func getMatches() -> [MatchDTO] {
         
+        let realm = try! Realm(configuration: .defaultConfiguration)
         let models = realm.objects(MatchModel.self)
         var matchesDTO: [MatchDTO] = []
         
@@ -42,14 +42,19 @@ class RealmDatabaseManagerServiceImpl: RealmDatabaseManagerService {
         return matchesDTO
     }
     
-    func deleteMatch(match: MatchDTO) {
+    func deleteMatch(match: MatchDTO, completion: @escaping () -> Void) {
         
         let matchModel = match.toModel()
         
-        if let objectToDelete = realm.object(ofType: MatchModel.self, forPrimaryKey: matchModel.id) {
+        DispatchQueue.global(qos: .utility).async {
             
-            try? realm.write {
-                realm.delete(objectToDelete)
+            let realm = try! Realm(configuration: .defaultConfiguration)
+            if let objectToDelete = realm.object(ofType: MatchModel.self, forPrimaryKey: matchModel.id) {
+                
+                try? realm.write {
+                    realm.delete(objectToDelete)
+                }
+                completion()
             }
         }
     }
