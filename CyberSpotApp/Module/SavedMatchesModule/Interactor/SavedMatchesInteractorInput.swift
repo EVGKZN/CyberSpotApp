@@ -10,6 +10,10 @@ import Foundation
 
 protocol SavedMatchesInteractorInput: AnyObject {
     
+    /// Function for loading matches from database
     func loadMatches()
+    
+    /// Function for deleting concrete match
+    /// - Parameter match: Match DTO to delete from database
     func deleteMatch(match: MatchDTO)
 }

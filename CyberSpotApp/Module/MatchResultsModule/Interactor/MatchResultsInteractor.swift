@@ -47,5 +47,4 @@ class MatchResultsInteractor: MatchResultsInteractorInput {
             if isSaved { self.notificationManager.notifyToUpdateSavedMatchesView() }
         }
     }
-    
 }

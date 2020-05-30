@@ -9,7 +9,7 @@
 import UIKit
 
 class MatchDetailViewController: UIViewController, MatchDetailViewInput, DetailViewConfigureProtocol, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
+    
     @IBOutlet weak var videogameImageView: UIImageView!
     @IBOutlet weak var videogameNameLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -24,20 +24,25 @@ class MatchDetailViewController: UIViewController, MatchDetailViewInput, DetailV
     @IBOutlet weak var leagueURLButton: UIButton!
     @IBOutlet weak var leagueLinkStackView: UIStackView!
     @IBOutlet weak var gamesCollectionView: UICollectionView!
+    @IBOutlet weak var firstTeamCountryLabel: UILabel!
+    @IBOutlet weak var secondTeamCountryLabel: UILabel!
     
     var presenter: MatchDetailViewOutput!
     var match: MatchDTO!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         videogameImageView.image = match.videogame.name == Constants.dota2Name ? UIImage(named: Constants.dota2ImageName) : UIImage(named: Constants.csgoImageName)
         videogameNameLabel.text = match.videogame.name == Constants.dota2Name ? Constants.dota2Name.uppercased() : Constants.csgoName
-            
+        
         firstTeamImageView.sd_setImage(with: URL(string: match.opponents[Constants.firstOpponentNumber].opponent.imageUrl), placeholderImage: UIImage(named: Constants.placeholderImageName))
         firstTeamNameLabel.text = match.opponents[Constants.firstOpponentNumber].opponent.name
+        firstTeamCountryLabel.text = match.opponents[Constants.firstOpponentNumber].opponent.location
+        
         secondTeamImageView.sd_setImage(with: URL(string: match.opponents[Constants.secondOpponentNumber].opponent.imageUrl), placeholderImage: UIImage(named: Constants.placeholderImageName))
         secondTeamNameLabel.text = match.opponents[Constants.secondOpponentNumber].opponent.name
+        secondTeamCountryLabel.text = match.opponents[Constants.secondOpponentNumber].opponent.location
         
         scoreLabel.text = "\(match.results[Constants.firstOpponentNumber].score) : \(match.results[Constants.secondOpponentNumber].score)"
         dateLabel.text = match.scheduledAt
@@ -68,16 +73,16 @@ class MatchDetailViewController: UIViewController, MatchDetailViewInput, DetailV
         }
     }
     
-     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return match.games.count
-     }
-     
-     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.customDetailViewGameCollectionViewCellReuseIdentifier, for: indexPath) as! GamesCollectionViewCell
         
-        var url = ""
-        var winnerTeamName = ""
+        var url = Constants.emptyString
+        var winnerTeamName = Constants.emptyString
         for opponent in match.opponents {
             if opponent.opponent.id == match.games[indexPath.row].winner.id {
                 url = opponent.opponent.imageUrl
@@ -86,5 +91,5 @@ class MatchDetailViewController: UIViewController, MatchDetailViewInput, DetailV
         }
         cell.configure(with: match.games[indexPath.row], imageURL: url, winnerTeamName: winnerTeamName)
         return cell
-     }
+    }
 }

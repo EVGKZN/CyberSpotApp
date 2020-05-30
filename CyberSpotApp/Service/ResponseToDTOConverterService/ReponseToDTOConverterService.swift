@@ -9,5 +9,8 @@
 import Foundation
 
 protocol ReponseToDTOConverterService {
+    
+    /// Function for converting array of network matches models to array of matches DTO
+    /// - Parameter matches: Array of network matches models to convert
     func convertToDTO(matches: [Match]) -> [MatchDTO]
 }

@@ -12,6 +12,4 @@ class MatchDetailPresenter: MatchDetailViewOutput, MatchDetailInteractorOutput {
     
     weak var view: MatchDetailViewInput!
     var interactor: MatchDetailInteractorInput!
-    
-    
 }

@@ -9,5 +9,7 @@
 import Foundation
 
 protocol OnboardingRouterInput: AnyObject {
+    
+    /// Function for dismissing onboarding view
     func dismissOnboarding()
 }

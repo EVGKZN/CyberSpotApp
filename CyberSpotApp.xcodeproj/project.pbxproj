@@ -34,7 +34,7 @@
 		FA49D4E224706AAC00B425AD /* MatchDetailInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D4E124706AAC00B425AD /* MatchDetailInteractorOutput.swift */; };
 		FA49D4E424706AC500B425AD /* MatchDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D4E324706AC500B425AD /* MatchDetailPresenter.swift */; };
 		FA49D4E624706B3800B425AD /* MatchDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D4E524706B3800B425AD /* MatchDetailAssembly.swift */; };
-		FA49D4E924706C0100B425AD /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D4E824706C0100B425AD /* Protocol.swift */; };
+		FA49D4E924706C0100B425AD /* DetailViewConfigureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D4E824706C0100B425AD /* DetailViewConfigureProtocol.swift */; };
 		FA49D4ED24707FD500B425AD /* GamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D4EB24707FD500B425AD /* GamesCollectionViewCell.swift */; };
 		FA49D4EE24707FD500B425AD /* GamesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA49D4EC24707FD500B425AD /* GamesCollectionViewCell.xib */; };
 		FA628C2224223D3100B1DE4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA628C2124223D3100B1DE4A /* AppDelegate.swift */; };
@@ -119,7 +119,7 @@
 		FA49D4E124706AAC00B425AD /* MatchDetailInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailInteractorOutput.swift; sourceTree = "<group>"; };
 		FA49D4E324706AC500B425AD /* MatchDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailPresenter.swift; sourceTree = "<group>"; };
 		FA49D4E524706B3800B425AD /* MatchDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailAssembly.swift; sourceTree = "<group>"; };
-		FA49D4E824706C0100B425AD /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		FA49D4E824706C0100B425AD /* DetailViewConfigureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewConfigureProtocol.swift; sourceTree = "<group>"; };
 		FA49D4EB24707FD500B425AD /* GamesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA49D4EC24707FD500B425AD /* GamesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamesCollectionViewCell.xib; sourceTree = "<group>"; };
 		FA628C1E24223D3100B1DE4A /* CyberSpotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberSpotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -394,7 +394,7 @@
 		FA49D4E724706BF900B425AD /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				FA49D4E824706C0100B425AD /* Protocol.swift */,
+				FA49D4E824706C0100B425AD /* DetailViewConfigureProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -849,7 +849,7 @@
 				FAE8E25C2438A83B00B881B7 /* OnboardingPresenter.swift in Sources */,
 				FA09CA472438A438002164A3 /* NewUserService.swift in Sources */,
 				FAB54CAD24433CFE00E582BF /* ReponseToDTOConverterService.swift in Sources */,
-				FA49D4E924706C0100B425AD /* Protocol.swift in Sources */,
+				FA49D4E924706C0100B425AD /* DetailViewConfigureProtocol.swift in Sources */,
 				FA1190FF2470B69F0064EEA2 /* SavedMatchesRouterInput.swift in Sources */,
 				FA2163DF244C935200F58F95 /* SettingsViewInput.swift in Sources */,
 				FA9886F62469AED10018BDFE /* Extensions.swift in Sources */,

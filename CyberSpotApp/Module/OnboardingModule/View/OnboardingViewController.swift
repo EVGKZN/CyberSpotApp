@@ -9,14 +9,8 @@
 import UIKit
 
 class OnboardingViewController: UIViewController, OnboardingViewInput {
-
-    var presenter: OnboardingViewOutput!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    var presenter: OnboardingViewOutput!
     
     @IBAction func didPressCloseButton(_ sender: Any) {
         presenter.closeOnboardingView()

@@ -11,9 +11,18 @@ import UIKit
 
 protocol SettingsInteractorInput: AnyObject {
     
+    /// Function to check current image of Dota2 button
     func getCurrentDota2ButtonStateImage()
+    
+    /// Function to check current image of CS:GO button
     func getCurrentCSGOButtonStateImage()
+    
+    /// Function for Dota2 button click processing
     func didPressedDota2SettingsButton()
+    
+    /// Function for CS:GO button click processing
     func didPressedCSGOSettingsButton()
+    
+    /// Function for notifying matches view to update
     func notifyToUpdateMatchesView()
 }

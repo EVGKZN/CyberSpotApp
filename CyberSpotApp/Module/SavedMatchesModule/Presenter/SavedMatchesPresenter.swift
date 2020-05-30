@@ -30,8 +30,8 @@ class SavedMatchesPresenter: SavedMatchesViewOutput, SavedMatchesInteractorOutpu
         view.didFinishDeletingMatch()
     }
     
-      func didPressCell(with match: MatchDTO) {
+    func didPressCell(with match: MatchDTO) {
         router.presentDetailView(for: match)
-      }
+    }
     
 }

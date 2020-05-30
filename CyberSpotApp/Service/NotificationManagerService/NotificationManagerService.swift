@@ -10,6 +10,9 @@ import Foundation
 
 protocol NotificationManagerService {
     
+    /// Function for notifying matches view to update
     func notifyToUpdateMatchesView()
+    
+    /// Function for notifying saved matches view to update
     func notifyToUpdateSavedMatchesView()
 }

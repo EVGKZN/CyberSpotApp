@@ -18,7 +18,7 @@ class ReponseToDTOConverterServiceImpl: ReponseToDTOConverterService {
         iso8601DateFormatter = DateFormatter()
         iso8601DateFormatter.locale = Locale(identifier: Constants.localeIdentifier)
         iso8601DateFormatter.dateFormat = Constants.iso8601DateFormat
-
+        
         customDateFormatter = DateFormatter()
         customDateFormatter.locale = Locale(identifier: Constants.localeIdentifier)
         customDateFormatter.dateFormat = Constants.customDateFormat
@@ -55,7 +55,7 @@ class ReponseToDTOConverterServiceImpl: ReponseToDTOConverterService {
     }
     
     private func formatStringDate(stringDate: String?) -> String {
-    
+        
         guard let stringDate = stringDate else { return Constants.undefinedStatus }
         
         guard let date = iso8601DateFormatter.date(from: stringDate) else { return Constants.undefinedStatus }

@@ -9,5 +9,7 @@
 import Foundation
 
 protocol OnboardingInteractorInput: AnyObject {
+    
+    /// Function for changing new user property in new user service
     func setUserIsNotNew()
 }

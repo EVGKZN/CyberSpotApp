@@ -9,6 +9,11 @@
 import Foundation
 
 protocol MatchResultsRouterInput: AnyObject {
+    
+    /// Function for presenting onboarding view
     func presentOnboarding()
+    
+    /// Function for presenting detail view for match
+    /// - Parameter match: Match DTO to present detail view for
     func presentDetailView(for match: MatchDTO)
 }

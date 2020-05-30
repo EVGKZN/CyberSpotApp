@@ -11,6 +11,8 @@ import UIKit
 
 extension MatchDTO {
     
+    /// Function for converting Match DTO to database match model
+    /// - Returns: Database match model
     func toModel() -> MatchModel {
         
         let videogame = VideogameModel(id: self.videogame.id, name: self.videogame.name, slug: self.videogame.slug)
@@ -50,6 +52,8 @@ extension MatchDTO {
 
 extension MatchModel {
     
+    /// Function for converting database match model to match DTO
+    /// - Returns: Match DTO
     func toDto() -> MatchDTO {
         
         let videogame = VideogameDTO(id: self.videogame!.id, name: self.videogame!.name, slug: self.videogame!.slug)
@@ -90,6 +94,9 @@ extension MatchModel {
 var vSpinner : UIView?
 
 extension UIViewController {
+    
+    /// Function for showing loading spinner
+    /// - Parameter onView: View to present spinner on
     func showSpinner(onView : UIView) {
         let spinnerView = UIView.init(frame: UIScreen.main.bounds)
         spinnerView.backgroundColor = UIColor.white
@@ -106,6 +113,7 @@ extension UIViewController {
         vSpinner = spinnerView
     }
     
+    /// Function for removing spinner from current view
     func removeSpinner() {
         DispatchQueue.main.async {
             vSpinner?.removeFromSuperview()
@@ -115,6 +123,7 @@ extension UIViewController {
 }
 
 extension UIColor {
+    
     convenience init(red: Int, green: Int, blue: Int) {
         let newRed = CGFloat(red)/255
         let newGreen = CGFloat(green)/255
@@ -125,6 +134,7 @@ extension UIColor {
 }
 
 extension NSAttributedString {
+    
     static func makeHyperlink(for path: String, in string: String, as substring: String) -> NSAttributedString {
         
         let nsString = NSString(string: string)
@@ -136,11 +146,15 @@ extension NSAttributedString {
 }
 
 extension Double {
-  func asString(style: DateComponentsFormatter.UnitsStyle) -> String {
-    let formatter = DateComponentsFormatter()
-    formatter.allowedUnits = [.hour, .minute, .second, .nanosecond]
-    formatter.unitsStyle = style
-    guard let formattedString = formatter.string(from: self) else { return "" }
-    return formattedString
-  }
+    
+    /// Function for converting double milliseconds as date string
+    /// - Parameter style: Style to convert to
+    /// - Returns: Converted string date
+    func asString(style: DateComponentsFormatter.UnitsStyle) -> String {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour, .minute, .second, .nanosecond]
+        formatter.unitsStyle = style
+        guard let formattedString = formatter.string(from: self) else { return Constants.emptyString }
+        return formattedString
+    }
 }

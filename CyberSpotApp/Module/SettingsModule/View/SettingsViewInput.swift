@@ -11,6 +11,11 @@ import UIKit
 
 protocol SettingsViewInput: AnyObject {
     
+    /// Function for checking current image of Dota2 button completion
+    /// - Parameter image: Current image of Dota2 button
     func didFinishGettingCurrentDota2ButtonStateImage(with image: UIImage)
+    
+    /// Function for checking current image of CS:GO button completion
+    /// - Parameter image: Current image of CS:GO button
     func didFinishGettingCurrentCSGOButtonStateImage(with image: UIImage)
 }

@@ -14,6 +14,7 @@ class SavedMatchesRouter: SavedMatchesRouterInput {
     weak var view: UIViewController!
     
     func presentDetailView(for match: MatchDTO) {
+        
         let vc = view.storyboard?.instantiateViewController(withIdentifier: Constants.detailViewControllerName) as! DetailViewConfigureProtocol
         vc.configure(with: match)
         view.present(vc as! UIViewController, animated: true, completion: nil)

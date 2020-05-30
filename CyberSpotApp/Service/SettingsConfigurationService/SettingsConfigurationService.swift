@@ -11,9 +11,18 @@ import UIKit
 
 protocol SettingsConfigurationService {
     
+    /// Function for initialization default app configuration
     func initDefaultConfiguration()
+    
+    /// Function to check current image of Dota2 button
     func getCurrentDota2ButtonStateImage() -> UIImage
+    
+    /// Function to check current image of CS:GO button
     func getCurrentCSGOButtonStateImage() -> UIImage
+    
+    /// Function for Dota2 button click processing
     func didPressedDota2SettingsButton()
+    
+    /// Function for CS:GO button click processing
     func didPressedCSGOSettingsButton()
 }

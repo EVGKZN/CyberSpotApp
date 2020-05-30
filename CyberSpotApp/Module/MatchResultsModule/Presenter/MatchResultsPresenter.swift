@@ -47,9 +47,9 @@ class MatchResultsPresenter: MatchResultsViewOutput, MatchResultsInteractorOutpu
         interactor.saveMatch(match: match)
     }
     
-      func didPressCell(with match: MatchDTO) {
+    func didPressCell(with match: MatchDTO) {
         router.presentDetailView(for: match)
-      }
+    }
     
     
 }

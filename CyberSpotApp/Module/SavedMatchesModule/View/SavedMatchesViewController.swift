@@ -9,7 +9,7 @@
 import UIKit
 
 class SavedMatchesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SavedMatchesViewInput {
-
+    
     @IBOutlet weak var noItemsView: UIView!
     @IBOutlet weak var savedMatchesTableView: UITableView!
     

@@ -9,6 +9,11 @@
 import Foundation
 
 protocol NetworkManagerService {
+    
+    /// Function for loading matches from API
+    /// - Parameter completion: Completion for function
     func loadMatches(completion: @escaping ([Match]) -> Void)
+    
+    /// Function for refreshing API matches page counter
     func refreshMatches()
 }

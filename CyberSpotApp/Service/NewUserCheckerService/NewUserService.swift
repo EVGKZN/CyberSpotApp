@@ -9,6 +9,10 @@
 import Foundation
 
 protocol NewUserService {
+    
+    /// Function for checking is user new in the app
     func isUserNew() -> Bool
+    
+    /// Function for setting, that user is not new in the app
     func setUserIsNotNew()
 }

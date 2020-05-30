@@ -9,5 +9,8 @@
 import Foundation
 
 protocol SavedMatchesRouterInput: AnyObject {
+    
+    /// Function for presenting detail view for match
+    /// - Parameter match: Match DTO to present detail view for
     func presentDetailView(for match: MatchDTO)
 }

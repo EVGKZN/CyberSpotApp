@@ -9,5 +9,7 @@
 import Foundation
 
 protocol OnboardingViewOutput: AnyObject {
+    
+    /// Function for calling dismiss onboarding view
     func closeOnboardingView()
 }

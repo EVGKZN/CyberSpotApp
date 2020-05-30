@@ -10,6 +10,10 @@ import Foundation
 
 protocol SavedMatchesInteractorOutput: AnyObject {
     
+    /// Function for matches loading completion
+    /// - Parameter matches: Array of loaded from database matches DTO
     func didFinishLoadingMatches(matches: [MatchDTO])
+    
+    /// Function for match deleting completion
     func didFinishDeletingMatch()
 }

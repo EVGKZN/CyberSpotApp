@@ -9,5 +9,8 @@
 import Foundation
 
 protocol MatchResultsViewInput: AnyObject {
+    
+    /// Function for loading matches from the API completion
+    /// - Parameter matches: Matches network models, that have been downloaded
     func didFinishMatchesLoading(matches: [MatchDTO])
 }
